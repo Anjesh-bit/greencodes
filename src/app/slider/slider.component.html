@@ -1,0 +1,37 @@
+<div class="container">
+
+  <div [ngStyle]="{
+
+    'border-top':'5px solid #c60021',
+    width :CounterValues,
+    'transition':'all 0.1s linear'
+
+  }">
+  </div>
+
+  <div class="header">
+    {{FilterBy}}: ({{currentIndex+1}}/{{FilterAllLength}})
+  </div>
+
+  <div class="slider">
+    <ul class="ul-list">
+      <li class="list-li" *ngFor="let images of (Allitems)|filters:FilterBy;let i=index">
+        <ng-container *ngIf="i===currentIndex">
+          <img class="ForSlidesimage" [src]="images.url" @SliderAnimation>
+        </ng-container>
+      </li>
+    </ul>
+
+
+    <button class="next" (click)="next()">
+      Next
+
+
+    </button>
+
+    <button class="prev" (click)="prev()">
+      Prev
+    </button>
+
+  </div>
+</div>

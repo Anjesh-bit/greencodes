@@ -1,0 +1,149 @@
+.wrapper {
+  display: none;
+}
+.jw-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  overflow: auto;
+}
+.jw-modal-body {
+  position: relative;
+
+  background: #fff;
+
+  margin: 40px;
+}
+
+.jw-modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: #000;
+  opacity: 0.75;
+
+  z-index: 900;
+}
+
+body.jw-modal-open {
+  overflow: hidden;
+}
+.closemodal {
+  height: 2rem;
+
+  width: 2rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+/*AbOUT*/
+.AboutModal {
+  width: 100%;
+}
+.imagemodal {
+  display: block;
+  max-width: 70%;
+  width: 70%;
+  margin: auto;
+}
+.paragraphmodal {
+  display: block;
+  max-width: 70%;
+  width: 70%;
+  margin: auto;
+  margin-top: 3rem;
+  word-spacing: 0.0034rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.SecondModalHeader {
+  display: block;
+  max-width: 70%;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 1rem;
+  font-size: 2.6rem;
+}
+
+.SecondParagraphModal {
+  display: block;
+  max-width: 70%;
+  width: 70%;
+  margin: auto;
+}
+.FirstModalHeader {
+  display: block;
+  max-width: 70%;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.teamsForTheModal {
+  position: absolute;
+  top: 50rem;
+  background-color: #e3e3e3;
+}
+
+/*
+slider
+*/
+
+.wrapper-division {
+  width: 100%;
+  padding: 3em 25em;
+}
+.ImagesSlidesf {
+  display: block;
+  width: 100%;
+  height: 30rem;
+}
+.slides-slides {
+  background: yellow;
+  width: 40%;
+  position: relative;
+}
+.wrapper-h2 {
+  font-size: 3rem;
+}
+.wrapper-paragraph {
+  font-size: 1rem;
+}
+.WrapperInner-division {
+  line-height: 1.8;
+  position: relative;
+}
+
+.next1 {
+  position: absolute;
+  top: 50%;
+  left: 94%;
+  width: 1.5rem;
+}
+.prev1 {
+  position: absolute;
+  top: 50%;
+  width: 1.5rem;
+}
+.wrapper-client {
+  margin-top: 2em;
+  line-height: 1.8;
+}
+.divforline {
+  position: absolute;
+  background-color: #c60021;
+  height: 0.148rem;
+  width: 16.7rem;
+  top: 4.6rem;
+}
+

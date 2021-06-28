@@ -1,0 +1,1085 @@
+<div class="container">
+  <div class="HomeList" id="HomeList">
+
+    <nav #navbar class="navbar">
+      <input type="checkbox" id="check">
+      <label for="check">
+        <img [src]="MenuItemss" (click)="showImage()" class="menu-itemss">
+        <img class="closemodal closemodal-hide" [src]="CloseModel">
+      </label>
+      <ul #list *ngFor="let arrays of courses" class="list">
+
+        <li class="Navlist"><a href="#HomeList" class="menu-items" (click)="home($event)">{{arrays.home}}</a></li>
+        <li class="Navlist"> <a href="#about" class="menu-items" (click)="about($event)">{{arrays.portfolio}}</a></li>
+        <li class="Navlist"><a href="#projects" class="menu-items" (click)="projectss($event)">{{arrays.services}}</a>
+        </li>
+        <li class="Navlist"><a href="#services" class="menu-items" (click)="Services($event)">{{arrays.studynook}}</a>
+        </li>
+        <div class="drop">
+          <li class="hoverAbout menu-items"><a>About</a></li>
+          <div class="hovarableContent">
+            <ul class="Ulhover">
+              <li class="hoverli" (click)="openModal('about')"><a>About us</a></li>
+              <li class="hoverli" (click)="openModal('projectss')"><a>Projects</a></li>
+              <li class="hoverli" (click)="openModal('services')"><a>Services</a></li>
+              <li class="hoverli" (click)="openModal('blogs')"><a>Blogs</a></li>
+            </ul>
+
+          </div>
+          <!--
+
+
+
+
+
+          -->
+
+          <app-common-modal id="about">
+            <div class="AboutModal" *ngFor="let modals of Formodal">
+              <img class="closemodal" [src]="CloseModel" (click)="closeModal('about')">
+
+              <h2 class="FirstModalHeader">{{modals.FirstHeader}}</h2>
+              <img class="imagemodal" [src]="modals.imageModal">
+              <p class="paragraphmodal">{{modals.ParagraphModal}}</p>
+              <h2 class="SecondModalHeader">{{modals.SecondHeader}}</h2>
+              <p class="SecondParagraphModal">{{modals.par2}}</p>
+
+
+              <div class="teamsheader">
+                <div [ngClass]="'ArrowH'" id="TeamsId"></div>
+                <h2 id="teamsh2">GreenCodes Team</h2>
+                <p id="teamsp">Young and talented members</p>
+              </div>
+
+
+              <div class="slides-team">
+                <div #innerslideForModal class="inner-slide11" *ngFor="let images of  Image">
+
+
+
+
+                  <div class="teamdiv" *ngFor="let team of Team">
+                    <img class="imageteam" [src]="images.image1">
+                    <div [ngClass]="'IneerDivisionteam'">
+                      <h2 [ngClass]="'HEADERTEAM'"> {{team.ManojRoka}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionM}}</h6>
+                    </div>
+                  </div>
+
+                  <div class="teamdiv" *ngFor="let team of Team">
+                    <img class="imageteam" [src]="images.image2">
+                    <div [ngClass]="'IneerDivisionteam'">
+                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Sresta}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionS}}</h6>
+                    </div>
+                  </div>
+
+                  <div class="teamdiv" *ngFor="let team of Team">
+                    <img class="imageteam" [src]="images.image3">
+                    <div [ngClass]="'IneerDivisionteam'">
+                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Gaurab}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionG}}</h6>
+                    </div>
+                  </div>
+
+                  <div class="teamdiv" *ngFor="let team of Team">
+                    <img class="imageteam" [src]="images.image4">
+                    <div [ngClass]="'IneerDivisionteam'">
+                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Amit}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionAm}}</h6>
+                    </div>
+                  </div>
+
+                  <div class="teamdiv" *ngFor="let team of Team">
+                    <img class="imageteam" [src]="images.image5">
+                    <div [ngClass]="'IneerDivisionteam'">
+                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Dinesh}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionD}}</h6>
+                    </div>
+                  </div>
+
+                  <div class="teamdiv" *ngFor="let team of Team">
+                    <img class="imageteam" [src]="images.image6">
+                    <div [ngClass]="'IneerDivisionteam'">
+                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Anjesh}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionA}}</h6>
+                    </div>
+
+
+                  </div>
+                  <div class="teamdiv" *ngFor="let team of Team">
+                    <img class="imageteam" [src]="images.image7">
+                    <div [ngClass]="'IneerDivisionteam'">
+                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Sabitri}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionSa}}</h6>
+                    </div>
+                  </div>
+
+                  <div class="teamdiv" *ngFor="let team of Team">
+                    <img class="imageteam" [src]="images.image8">
+                    <div [ngClass]="'IneerDivisionteam'">
+                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Abd}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionAbd}}</h6>
+                    </div>
+                  </div>
+
+                  <div class="teamdiv" *ngFor="let team of Team">
+                    <img class="imageteam" [src]="images.image10">
+                    <div [ngClass]="'IneerDivisionteam'">
+                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Niraj}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionN}}</h6>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </app-common-modal>
+
+
+
+
+          <app-common-modal id="projectss">
+            <img [src]="CloseModel" class="closemodal" (click)="closeModal('projectss')">
+            <div id="projects" class="projects" *ngFor="let projects of projects">
+              <div class="titleprojects">
+                <div [ngClass]="'ArrowH'" id="ProjectsId"></div>
+                <h2 id="projectsh2">{{projects.title}}</h2>
+                <p id="projectsp">{{projects.paragraph}}</p>
+              </div>
+
+              <div class="projectsinner">
+                <div>
+                  <button class="btn" id="1" (click)="ForBTnAll('all')">{{projects.btn1}}</button>
+                </div>
+
+                <div>
+                  <button class="btn" id="2" (click)="ForBTnAllCi('ci')">{{projects.btn2}}</button>
+                </div>
+
+                <div>
+                  <button class="btn" id="3" (click)="ForBTnAllDR('dr')">{{projects.btn3}}</button>
+                </div>
+
+                <div>
+                  <button class="btn" id="4" (click)=" ForBTnAlleC('ec')">{{projects.btn4}}</button>
+                </div>
+                <div>
+                  <button class="btn" id="5" (click)="ForBTnAllMag('ma')">{{projects.btn5}}</button>
+
+                </div>
+                <div>
+                  <button class="btn" id="6" (click)="ForBTnAllword('wo')">{{projects.btn6}}</button>
+
+                </div>
+
+
+
+              </div>
+
+              <div class="gridwo" *ngFor="let Projects of  AllPROJECTS">
+                <div *ngIf="showpicture.Condition" class="PROJECTImages5">
+                  <img (click)="Bradmorebuilders('Bradmorebuilders')" [src]="Projects.Bradmorebuilders"
+                    [ngClass]="'Pictures'" title="Bradmorebuilders">
+
+
+
+
+
+                  <img (click)="MonsterWebPlanner('MonsterWebplanner')" [src]="Projects.MonsterWebPlanner"
+                    [ngClass]="'Pictures'" title="MonsterWebPlanner">
+
+                  <img (click)="NorthWest('Northwest')" [src]="Projects.NorthWest" [ngClass]="'Pictures'"
+                    title="NorthWestHillsStorage">
+
+
+                  <img (click)="Tensinpen('tensipen')" [src]="Projects.Tensinpen" [ngClass]="'Pictures'"
+                    title="Tensinpen">
+
+
+
+
+
+
+                </div>
+              </div>
+              <!--CI -->
+              <div class="gridci" *ngFor="let Projects of  AllPROJECTS">
+                <div *ngIf="showpicture.ci" class="PROJECTImages1">
+
+                  <div (click)="MonsterWebPlanner('MonsterWebplanner')" title="MonsterWebPlanner" id="ci1">
+                    <img [src]="Projects.MonsterWebPlanner" [ngClass]="'Pictures'" id="ci-1-modal">
+                  </div>
+
+                  <div (click)="Travelmoon('traveltothemoon')" id="ci2" title="TravelYouToTheMoon">
+                    <img [src]="Projects.Travelmoon" [ngClass]="'Pictures'" id="ci-2-modal">
+
+
+                  </div>
+
+
+                </div>
+              </div>
+
+              <!--ALL-->
+
+              <!--Drupal-->
+              <div class="griddr" *ngFor="let Projects of  AllPROJECTS">
+                <div *ngIf="showpicture.drupal" class="PROJECTImages2">
+
+
+                  <div (click)="CanyoLake('canyonLake')" title="CanyonLakeFire" id="Dru-modal">
+                    <img [src]="Projects.CanyoLake" [ngClass]="'Pictures'">
+
+                  </div>
+
+                </div>
+              </div>
+
+              <!--E-commerce -->
+              <div class="gridec" *ngFor="let Projects of  AllPROJECTS">
+                <div *ngIf="showpicture.ecomm" class="PROJECTImages3">
+
+
+
+
+                  <div (click)="Comalfloweshop('comalflower')" title="Comalfloweshop" id="comal-modal">
+                    <img [src]="Projects.Comalfloweshop" [ngClass]="'Pictures'">
+
+                  </div>
+
+
+                  [ngClass]="'Pictures'">
+
+
+
+
+                </div>
+              </div>
+              <!--magento -->
+              <div class="gridmg" *ngFor="let Projects of  AllPROJECTS">
+                <div *ngIf="showpicture.magneto" class="PROJECTImages4">
+
+
+
+                  <div (click)="Comalfloweshop('comalflower')" title="Comalfloweshop" id="magento-modal">
+                    <img [src]="Projects.Comalfloweshop" [ngClass]="'Pictures'">
+                  </div>
+
+
+
+
+
+                </div>
+              </div>
+              <!--wordpress-->
+              <div class="gridwo" *ngFor="let Projects of  AllPROJECTS">
+                <div *ngIf="showpicture.wordpress" class="PROJECTImages5">
+
+                  <div (click)="Bradmorebuilders('Bradmorebuilders')" title="Bradmorebuilders" id="word-modal">
+                    <img [src]="Projects.Bradmorebuilders" [ngClass]="'Pictures'">
+                  </div>
+
+
+
+
+                  <div (click)="MonsterWebPlanner('MonsterWebplanner')" title="MonsterWebPlanner" id="word-modal">
+                    <img [src]="Projects.MonsterWebPlanner" [ngClass]="'Pictures'">
+                  </div>
+
+
+                  <div (click)="NorthWest('Northwest')" title="NorthWestHillsStorage" id="word-modal">
+                    <img [src]="Projects.NorthWest" [ngClass]="'Pictures'">
+                  </div>
+
+                  <div (click)="Tensinpen('tensipen')" title="Tensinpen" id="word-modal">
+                    <img [src]="Projects.Tensinpen" [ngClass]="'Pictures'">
+                  </div>
+
+
+
+
+
+
+
+
+                </div>
+              </div>
+              <!---->
+
+              <div class="grid" *ngFor="let Projects of  AllPROJECTS">
+                <div *ngIf="showpicture.All" class="PROJECTImages">
+
+
+                  <div class="All" (click)="Bradmorebuilders('Bradmorebuilders')" id="img1">
+                    <img id="Brad" [src]="Projects.Bradmorebuilders" [ngClass]="'Pictures'" title="Bradmorebuilders">
+
+
+                  </div>
+                  <div class="All" (click)="CanyoLake('canyonLake')" id="img2">
+                    <img id="canyon" [src]="Projects.CanyoLake" [ngClass]="'Pictures'" title="CanyonLakeFire">
+                  </div>
+
+
+                  <div class="All" (click)="MonsterWebPlanner('MonsterWebplanner')" id="img3">
+                    <img id="monster" [src]="Projects.MonsterWebPlanner" [ngClass]="'Pictures'"
+                      title="MonsterWebPlanner">
+                  </div>
+
+                  <div class="All" id="img4" (click)="NorthWest('Northwest')">
+                    <img id="north" [src]="Projects.NorthWest" [ngClass]="'Pictures'" title="NorthWestHillsStorage">
+                  </div>
+
+                  <div class="All" id="img5" (click)="Tensinpen('tensipen')">
+                    <img id="tensipen" [src]="Projects.Tensinpen" [ngClass]="'Pictures'" title="Tensinpen">
+
+                  </div>
+
+
+                  <div class="All" id="img6" (click)="Comalfloweshop('comalflower')">
+                    <img id="comal" [src]="Projects.Comalfloweshop" [ngClass]="'Pictures'" title="Comalfloweshop">
+                  </div>
+
+
+
+                  <div class="All" (click)="Travelmoon('traveltothemoon')" id="img7">
+                    <img id="travel" [src]="Projects.Travelmoon" [ngClass]="'Pictures'" title="TravelYouToTheMoon">
+                  </div>
+
+
+
+                </div>
+
+
+              </div>
+
+
+            </div>
+
+          </app-common-modal>
+          <app-common-modal id="services">
+            <img class="closemodal" [src]="CloseModel" (click)="closeModal('services')">
+
+            <div id="services" class="services">
+              <div class="ourservices">
+                Our Services
+              </div>
+
+              <div class="ServiceArrow"></div>
+              <div class="services2" *ngFor="let services of services">
+
+
+
+                <div class="cart">
+                  <h2 id="Servicesh2">{{services.servicesfor1}}</h2>
+                  <p id="servicsesp">{{services.servicsdescp1}}</p>
+                </div>
+                <div class="cart">
+                  <h2 id="Servicesh2">{{services.servicesfor2}}</h2>
+                  <p id="servicsesp">{{services.servicsdescp2}}</p>
+                </div>
+                <div class="cart">
+                  <h2 id="Servicesh2">{{services.servicesfor3}}</h2>
+                  <p id="servicsesp">{{services.servicsdescp3}}</p>
+                </div>
+                <div class="cart">
+                  <h2 id="Servicesh2">{{services.servicesfor4}}</h2>
+                  <p id="servicsesp">{{services.servicsdescp4}}</p>
+                </div>
+
+              </div>
+            </div>
+
+          </app-common-modal>
+          <app-common-modal id="blogs">
+
+
+          </app-common-modal>
+          <app-common-modal id="allofthecontent">
+            <div class="wrapper-division" *ngFor="let contents of AllContent |contentPipes:FilterByAll">
+
+
+
+              <div class="WrapperInner-division">
+                <h2 class="wrapper-h2">{{contents.heading}}</h2>
+                <div class="divforline"></div>
+                <p class="wrapper-paragraph">{{contents.paragraph}}</p>
+                <p class="wrapper-paragraph wrapper-para">visit here:</p>
+
+
+
+
+
+              </div>
+
+              <div class="slides-slides">
+                <div class="sliderimages" *ngFor="let images of  ImagesSlider|forImageCarousal:FilterByAll;let i=index">
+
+                  <ng-container *ngIf="i===currentIndex">
+                    <img class="ImagesSlidesf" [src]="images.url">
+                  </ng-container>
+
+                </div>
+
+
+
+
+                <img [src]="backarrow" class="next1" (click)="next()">
+
+
+
+
+
+                <img [src]="frontarrow" class="prev1" (click)="prev()">
+
+
+
+              </div>
+
+
+
+              <div class="wrapper-client">
+                <p class="wrapper-con">Client:{{contents.client}}</p>
+                <p class="wrapper-con">Date:{{contents.date}}</p>
+                <p class="wrapper-con">Location:{{contents.location}}</p>
+              </div>
+
+
+
+            </div>
+
+
+          </app-common-modal>
+
+
+        </div>
+
+        <li class="Navlist menu-items"><a href="#contactus" (click)="contactus($event)">{{arrays.aboutus}}</a></li>
+
+
+      </ul>
+
+    </nav>
+
+
+
+
+
+    <div class="top-paragraph">
+      <div class="insideparagraph" *ngFor="let courses of courses">
+        <div [ngClass]="'ArrowH'" id="HomeId"></div>
+        <h1 id="toph1">{{courses.greencodes}}</h1>
+        <p class="Automate"><span>Let us automate</span>{{courses.greencodeparagraph}}<span>we make it come true</span>
+        </p>
+
+      </div>
+      <div>
+        <button class="small-md">GET IN TOUCH
+
+        </button>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+<!--About-->
+
+<div class="container container-max">
+  <div id="about" class="About">
+    <div class="AboutInner" *ngFor="let courses of courses">
+      <div [ngClass]="'ArrowH'" id="AboutId"></div>
+      <h2 id="AboutH2">{{courses.title}}</h2>
+      <h4 class="small-about-md"><span>Green Codes is a team</span>{{courses.paragraph}}<span>developers from
+          Nepal.</span></h4>
+      <p id="AboutP" class="small-screen-p">{{courses.innerparagraph}}</p>
+    </div>
+    <div class="sliderforimages">
+      <div class="innerslide" *ngFor="let images of Image">
+        <input type="radio" name="ra1-btn" id="ra1">
+        <input type="radio" name="ra1-btn" id="ra2">
+        <input type="radio" name="ra1-btn" id="ra3">
+        <input type="radio" name="ra1-btn" id="ra4">
+
+
+        <div class="slide first">
+          <img class="imgslide" [src]="images.image11">
+        </div>
+
+
+
+        <div class="slide">
+          <img class="imgslide" [src]="images.image12">
+        </div>
+        <div class="slide">
+          <img class="imgslide" [src]="images.image13">
+        </div>
+        <div class="slide">
+          <img class="imgslide" [src]="images.image14">
+        </div>
+
+
+
+      </div>
+
+
+
+      <!--manual navigation-->
+      <div class="manual-nav">
+        <label for="ra1" class="ma-btn"></label>
+        <label for="ra2" class="ma-btn"></label>
+        <label for="ra3" class="ma-btn"></label>
+        <label for="ra4" class="ma-btn"></label>
+
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+</div>
+
+<!--services-->
+<div class="container">
+  <div id="services" class="services">
+    <div class="ourservices">
+      Our Services
+    </div>
+
+    <div class="ServiceArrow"></div>
+    <div class="services2" *ngFor="let services of services">
+
+
+
+      <div class="cart">
+        <h2 id="Servicesh2">{{services.servicesfor1}}</h2>
+        <p id="servicsesp">{{services.servicsdescp1}}</p>
+      </div>
+      <div class="cart">
+        <h2 id="Servicesh2">{{services.servicesfor2}}</h2>
+        <p id="servicsesp">{{services.servicsdescp2}}</p>
+      </div>
+      <div class="cart">
+        <h2 id="Servicesh2">{{services.servicesfor3}}</h2>
+        <p id="servicsesp">{{services.servicsdescp3}}</p>
+      </div>
+      <div class="cart">
+        <h2 id="Servicesh2">{{services.servicesfor4}}</h2>
+        <p id="servicsesp">{{services.servicsdescp4}}</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--projects-->
+<div class="container container-max">
+  <div id="projects" class="projects" *ngFor="let projects of projects">
+    <div class="titleprojects">
+      <div [ngClass]="'ArrowH'" id="ProjectsId"></div>
+      <h2 id="projectsh2">{{projects.title}}</h2>
+      <p id="projectsp">{{projects.paragraph}}</p>
+    </div>
+
+    <div class="projectsinner">
+      <div>
+        <button class="btn" id="1" (click)="ForBTnAll('all')">{{projects.btn1}}</button>
+      </div>
+
+      <div>
+        <button class="btn" id="2" (click)="ForBTnAllCi('ci')">{{projects.btn2}}</button>
+      </div>
+
+      <div>
+        <button class="btn" id="3" (click)="ForBTnAllDR('dr')">{{projects.btn3}}</button>
+      </div>
+
+      <div>
+        <button class="btn" id="4" (click)="ForBTnAlleC('ec')">{{projects.btn4}}</button>
+      </div>
+      <div>
+        <button class="btn" id="5" (click)="ForBTnAllMag('ma')">{{projects.btn5}}</button>
+
+      </div>
+      <div>
+        <button class="btn" id="6" (click)="ForBTnAllword('wo')">{{projects.btn6}}</button>
+
+      </div>
+
+
+
+    </div>
+
+
+
+    <div class="gridwo" *ngFor="let Projects of  AllPROJECTS">
+      <div *ngIf="showpicture.Condition" class="PROJECTImages5">
+
+        <div class="word-modal" title="Bradmorebuilders" id="word-modal0">
+          <img id="word-images1" [src]="Projects.Bradmorebuilders" [ngClass]="'Pictures'">
+          <div class="inner-word1">
+            <img (click)="Bradmorebuilders1('Bradmorebuilders','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="Bradmorebuilders('Bradmorebuilders')" class="inner-allheader1">Bradmorebuilders</h2>
+          </div>
+        </div>
+
+
+
+
+        <div class="word-modal" title="MonsterWebPlanner" id="word-modal1">
+          <img id="word-images2" [src]="Projects.MonsterWebPlanner" [ngClass]="'Pictures'">
+          <div class="inner-word2">
+            <img (click)="MonsterWebPlanner1('MonsterWebplanner','allofthecontent')" class="Common-image"
+              [src]="Expand">
+            <h2 (click)="MonsterWebPlanner('MonsterWebplanner')" class="inner-allheader1">MonsterWebPlanner</h2>
+          </div>
+        </div>
+
+
+        <div class="word-modal" title="NorthWestHillsStorage" id="word-modal2">
+          <img id="word-images3" [src]="Projects.NorthWest" [ngClass]="'Pictures'">
+          <div class="inner-word3">
+            <img (click)="NorthWest1('Northwest','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="NorthWest('Northwest')" class="inner-allheader1">NorthWestHillsStorage</h2>
+          </div>
+        </div>
+
+        <div class="word-modal" title="Tensinpen" id="word-modal3">
+          <img id="word-images4" [src]="Projects.Tensinpen" [ngClass]="'Pictures'">
+          <div class="inner-word4">
+            <img (click)="Tensinpen1('tensipen','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="Tensinpen('tensipen')" class="inner-allheader1">Tensinpen</h2>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+
+
+    <!--CI -->
+    <div class="gridci" *ngFor="let Projects of  AllPROJECTS">
+      <div *ngIf="showpicture.ci" class="PROJECTImages1">
+
+        <div class="Ci-modal" title="MonsterWebPlanner" id="ci1">
+          <img [src]="Projects.MonsterWebPlanner" [ngClass]="'Pictures'" id="ci-1-modal">
+          <div class="inner-word-ci1">
+            <img (click)="MonsterWebPlanner1('MonsterWebplanner','allofthecontent')" class="Common-image"
+              [src]="Expand">
+            <h2 (click)="MonsterWebPlanner('MonsterWebplanner')" class="inner-allheader1">Bradmorebuilders</h2>
+          </div>
+        </div>
+
+        <div class="Ci-modal" title="TravelYouToTheMoon" id="ci2">
+          <img [src]="Projects.Travelmoon" [ngClass]="'Pictures'" id="ci-2-modal">
+          <div class="inner-word-ci2">
+            <img (click)="Travelmoon1('traveltothemoon','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="Travelmoon('traveltothemoon')" class="inner-allheader1">Bradmorebuilders</h2>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <!--ALL-->
+
+    <!--Drupal-->
+    <div class="griddr" *ngFor="let Projects of  AllPROJECTS">
+      <div *ngIf="showpicture.drupal" class="PROJECTImages2">
+
+
+        <div title="CanyonLakeFire" id="Dru-modal">
+          <img [src]="Projects.CanyoLake" [ngClass]="'Pictures'" id="dru-pictures">
+          <div class="inner-drup">
+            <img (click)="CanyoLake1('canyonLake','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="CanyoLake('canyonLake')" class="inner-allheader1">Bradmorebuilders</h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--E-commerce -->
+    <div class="gridec" *ngFor="let Projects of  AllPROJECTS">
+      <div *ngIf="showpicture.ecomm" class="PROJECTImages3">
+
+
+
+
+        <div title="Comalfloweshop" id="comal-modal">
+          <img [src]="Projects.Comalfloweshop" [ngClass]="'Pictures'" id="images-eccc">
+          <div class="inner-eccc">
+            <img (click)="Comalfloweshop1('comalflower','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="Comalfloweshop('comalflower')" class="inner-allheader1">Bradmorebuilders</h2>
+          </div>
+        </div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+    <!--magento -->
+    <div class="gridmg" *ngFor="let Projects of  AllPROJECTS">
+      <div *ngIf="showpicture.magneto" class="PROJECTImages4">
+
+
+
+        <div title="Comalfloweshop" id="magento-modal">
+          <img [src]="Projects.Comalfloweshop" [ngClass]="'Pictures'" id="mag-images">
+          <div class="inner-word-magento">
+            <img (click)="Comalfloweshop1('comalflower','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="Comalfloweshop('comalflower')" class="inner-allheader1">Bradmorebuilders</h2>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+    <!--wordpress-->
+    <div class="gridwo" *ngFor="let Projects of  AllPROJECTS">
+      <div *ngIf="showpicture.wordpress" class="PROJECTImages5">
+
+        <div class="word-modal" title="Bradmorebuilders" id="word-modal0">
+          <img id="word-images1" [src]="Projects.Bradmorebuilders" [ngClass]="'Pictures'">
+          <div class="inner-word1">
+            <img (click)="Bradmorebuilders1('Bradmorebuilders','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="Bradmorebuilders('Bradmorebuilders')" class="inner-allheader1">Bradmorebuilders</h2>
+          </div>
+        </div>
+
+
+
+
+        <div class="word-modal" title="MonsterWebPlanner" id="word-modal1">
+          <img id="word-images2" [src]="Projects.MonsterWebPlanner" [ngClass]="'Pictures'">
+          <div class="inner-word2">
+            <img (click)="MonsterWebPlanner1('MonsterWebplanner','allofthecontent')" class="Common-image"
+              [src]="Expand">
+            <h2 (click)="MonsterWebPlanner('MonsterWebplanner')" class="inner-allheader1">MonsterWebPlanner</h2>
+          </div>
+        </div>
+
+
+        <div class="word-modal" title="NorthWestHillsStorage" id="word-modal2">
+          <img id="word-images3" [src]="Projects.NorthWest" [ngClass]="'Pictures'">
+          <div class="inner-word3">
+            <img (click)="NorthWest1('Northwest','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="NorthWest('Northwest')" class="inner-allheader1">NorthWestHillsStorage</h2>
+          </div>
+        </div>
+
+        <div class="word-modal" title="Tensinpen" id="word-modal3">
+          <img id="word-images4" [src]="Projects.Tensinpen" [ngClass]="'Pictures'">
+          <div class="inner-word4">
+            <img (click)="Tensinpen1('tensipen','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="Tensinpen('tensipen')" class="inner-allheader1">Tensinpen</h2>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+    <!--All--->
+
+    <div class="grid" *ngFor="let Projects of  AllPROJECTS">
+      <div *ngIf="showpicture.All" class="PROJECTImages">
+
+
+        <div class="All" id="img1">
+          <img id="Brad" [src]="Projects.Bradmorebuilders" [ngClass]="'Pictures'" title="Bradmorebuilders">
+          <div class="inner-all1">
+            <img (click)="Bradmorebuilders1('Bradmorebuilders','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="Bradmorebuilders('Bradmorebuilders')" class="inner-allheader1">Bradmorebuilders</h2>
+          </div>
+
+        </div>
+        <div class="All" id="img2">
+          <img id="canyon" [src]="Projects.CanyoLake" [ngClass]="'Pictures'" title="CanyonLakeFire">
+          <div class="inner-all2">
+            <img (click)="CanyoLake1('canyonLake','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="CanyoLake('canyonLake')" class="inner-allheader1">CanyonLakeFire</h2>
+          </div>
+        </div>
+
+
+        <div class="All" id="img3">
+          <img id="monster" [src]="Projects.MonsterWebPlanner" [ngClass]="'Pictures'" title="MonsterWebPlanner">
+          <div class="inner-all3">
+            <img (click)="MonsterWebPlanner1('MonsterWebplanner','allofthecontent')" class="Common-image"
+              [src]="Expand">
+            <h2 (click)="MonsterWebPlanner('MonsterWebplanner')" class="inner-allheader1">MonsterWebPlanner</h2>
+          </div>
+        </div>
+
+        <div class="All" id="img4">
+          <img id="north" [src]="Projects.NorthWest" [ngClass]="'Pictures'" title="NorthWestHillsStorage">
+          <div class="inner-all4">
+            <img (click)="NorthWest1('Northwest','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="NorthWest('Northwest')" class="inner-allheader1">NorthWestHillsStorage</h2>
+          </div>
+        </div>
+
+        <div class="All" id="img5">
+          <img id="tensipen" [src]="Projects.Tensinpen" [ngClass]="'Pictures'" title="Tensinpen">
+          <div class="inner-all5">
+            <img (click)="Tensinpen1('tensipen','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="Tensinpen('tensipen')" class="inner-allheader1">Tensinpen</h2>
+          </div>
+
+        </div>
+
+
+        <div class="All" id="img6">
+          <img id="comal" [src]="Projects.Comalfloweshop" [ngClass]="'Pictures'" title="Comalfloweshop">
+          <div class="inner-all6">
+            <img (click)="Comalfloweshop1('comalflower','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 class="inner-allheader1">Comalfloweshop</h2>
+          </div>
+        </div>
+
+
+
+        <div class="All" id="img7">
+          <img id="travel" [src]="Projects.Travelmoon" [ngClass]="'Pictures'" title="TravelYouToTheMoon">
+          <div class="inner-all7">
+            <img (click)="Travelmoon1('traveltothemoon','allofthecontent')" class="Common-image" [src]="Expand">
+            <h2 (click)="Travelmoon('traveltothemoon')" class="inner-allheader1">TravelYouToTheMoon</h2>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+</div>
+<!--teams-->
+<div class="container containermargin">
+  <div #teams class="teams">
+
+    <div class="teamsheader">
+      <div [ngClass]="'ArrowH'" id="TeamsId"></div>
+      <h2 id="teamsh2">GreenCodes Team</h2>
+      <p id="teamsp">Young and talented members</p>
+    </div>
+
+
+    <div class="slides-team">
+      <div #innerslide11 class="inner-slide11" *ngFor="let images of  Image">
+
+
+
+
+        <div class="teamdiv" *ngFor="let team of Team">
+          <img class="imageteam" [src]="images.image1">
+          <div [ngClass]="'IneerDivisionteam'">
+            <h2 [ngClass]="'HEADERTEAM'"> {{team.ManojRoka}}</h2>
+            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionM}}</h6>
+          </div>
+        </div>
+
+        <div class="teamdiv" *ngFor="let team of Team">
+          <img class="imageteam" [src]="images.image2">
+          <div [ngClass]="'IneerDivisionteam'">
+            <h2 [ngClass]="'HEADERTEAM'"> {{team.Sresta}}</h2>
+            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionS}}</h6>
+          </div>
+        </div>
+
+        <div class="teamdiv" *ngFor="let team of Team">
+          <img class="imageteam" [src]="images.image3">
+          <div [ngClass]="'IneerDivisionteam'">
+            <h2 [ngClass]="'HEADERTEAM'"> {{team.Gaurab}}</h2>
+            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionG}}</h6>
+          </div>
+        </div>
+
+        <div class="teamdiv" *ngFor="let team of Team">
+          <img class="imageteam" [src]="images.image4">
+          <div [ngClass]="'IneerDivisionteam'">
+            <h2 [ngClass]="'HEADERTEAM'"> {{team.Amit}}</h2>
+            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionAm}}</h6>
+          </div>
+        </div>
+
+        <div class="teamdiv" *ngFor="let team of Team">
+          <img class="imageteam" [src]="images.image5">
+          <div [ngClass]="'IneerDivisionteam'">
+            <h2 [ngClass]="'HEADERTEAM'"> {{team.Dinesh}}</h2>
+            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionD}}</h6>
+          </div>
+        </div>
+
+        <div class="teamdiv" *ngFor="let team of Team">
+          <img class="imageteam" [src]="images.image6">
+          <div [ngClass]="'IneerDivisionteam'">
+            <h2 [ngClass]="'HEADERTEAM'"> {{team.Anjesh}}</h2>
+            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionA}}</h6>
+          </div>
+
+
+        </div>
+        <div class="teamdiv" *ngFor="let team of Team">
+          <img class="imageteam" [src]="images.image7">
+          <div [ngClass]="'IneerDivisionteam'">
+            <h2 [ngClass]="'HEADERTEAM'"> {{team.Sabitri}}</h2>
+            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionSa}}</h6>
+          </div>
+        </div>
+
+        <div class="teamdiv" *ngFor="let team of Team">
+          <img class="imageteam" [src]="images.image8">
+          <div [ngClass]="'IneerDivisionteam'">
+            <h2 [ngClass]="'HEADERTEAM'"> {{team.Abd}}</h2>
+            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionAbd}}</h6>
+          </div>
+        </div>
+
+        <div class="teamdiv" *ngFor="let team of Team">
+          <img class="imageteam" [src]="images.image10">
+          <div [ngClass]="'IneerDivisionteam'">
+            <h2 [ngClass]="'HEADERTEAM'"> {{team.Niraj}}</h2>
+            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionN}}</h6>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+</div>
+<!--teams-->
+
+<!--Forms Contact-->
+<div class="container container-max">
+  <div id="contactus" [ngClass]="ContactForm">
+
+    <div [ngClass]="'FellFreeToContact'" *ngFor="let info of InfoForm ">
+      <div [ngClass]="'ArrowH'" id="FormsId"></div>
+      <h4 [ngClass]="'HeaderContact'">{{info.contactus}}</h4>
+      <h1 [ngClass]="'HeaderContact'">{{info.feelfree}}</h1>
+      <p [ngClass]="'ParagraphContact'">{{info.number}}</p>
+      <p [ngClass]="'ParagraphContact'">{{info.info}}</p>
+      <p [ngClass]="'ParagraphContact'">{{info.location}}</p>
+      <p [ngClass]="'ParagraphContact'">{{info.inquiry}}</p>
+      <p [ngClass]="'ParagraphContact'">{{info.search}}</p>
+
+    </div>
+    <div class="innerContact">
+
+      <form class="form" [formGroup]="CredentialsofGreenforms" (ngSubmit)="Submit()">
+        <div class="wrapper-div">
+          <div class="input-form">
+
+            <input placeholder="FirstName" type="text" formControlName="FirstName">
+          </div>
+          <div class="input-form">
+
+            <input placeholder="LastName" type="text" formControlName="LastName">
+
+          </div>
+
+          <div class="input-form">
+
+            <input placeholder="Email" type="email" formControlName="email">
+          </div>
+          <div class="input-form">
+
+            <input placeholder="Phone Number" type="number" formControlName="number">
+          </div>
+
+          <div class="input-textarea">
+            <textarea [ngClass]="ForTextarea" placeholder="Message Now" formControlName="textarea">
+
+  </textarea>
+          </div>
+
+          <div class="btns-textarea">
+            <button [ngClass]="Submit1" type="submit" [disabled]="!CredentialsofGreenforms.valid">Submit</button>
+          </div>
+
+        </div>
+
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container container-maxx">
+  <div [ngClass]="Footer">
+    <div [ngClass]="InnerFooter">
+      <p [ngClass]="'DATE'">Copyright @{{ time| async}} Greencodes Nepal. All rights reserved.</p>
+
+    </div>
+    <div [ngClass]="'Icons'" *ngFor="let icons of Icons">
+      <p [ngClass]="'FollowUs'">Follow Us </p>
+      <div [ngClass]="'Arrow'"></div>
+      <img [ngClass]="'IconsForFooter'" [src]="icons.facebook" title="Facebook">
+      <img [ngClass]="'IconsForFooter'" [src]="icons.Google" title="Google">
+      <img [ngClass]="'IconsForFooter'" [src]="icons.linkedin" title="Linkedin">
+      <img [ngClass]="'IconsForFooter'" [src]="icons.Twitter" title="Twitter">
+      <img [ngClass]="'IconsForFooter'" [src]="icons.youtube" title="Youtube">
+
+    </div>
+    <!---->
+    <div #HomeList class="top-link">
+      <a href="#HomeList" (click)="BacktoTop($event)">
+        <img [src]="Backtotop" class="ImageClass">
+      </a>
+    </div>
+
+  </div>
+
+</div>
+<!--footer-->
