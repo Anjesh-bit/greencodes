@@ -1,11 +1,12 @@
-<div class="container">
+<div class="container forcontainerheight">
   <div class="HomeList" id="HomeList">
 
     <nav #navbar class="navbar">
       <input type="checkbox" id="check">
       <label for="check">
-        <img [src]="MenuItemss" (click)="showImage()" class="menu-itemss">
-        <img class="closemodal closemodal-hide" [src]="CloseModel">
+        <img [src]="MenuItemss" (click)="showImage('menu')" class="menu-itemss">
+        <img class="closemodal closemodal-hide" [src]="CloseModel" (click)="closed('close')">
+
       </label>
       <ul #list *ngFor="let arrays of courses" class="list">
 
@@ -35,6 +36,9 @@
           -->
 
           <app-common-modal id="about">
+            <!--
+
+            -->
             <div class="AboutModal" *ngFor="let modals of Formodal">
               <img class="closemodal" [src]="CloseModel" (click)="closeModal('about')">
 
@@ -45,96 +49,120 @@
               <p class="SecondParagraphModal">{{modals.par2}}</p>
 
 
-              <div class="teamsheader">
-                <div [ngClass]="'ArrowH'" id="TeamsId"></div>
-                <h2 id="teamsh2">GreenCodes Team</h2>
-                <p id="teamsp">Young and talented members</p>
-              </div>
 
 
-              <div class="slides-team">
-                <div #innerslideForModal class="inner-slide11" *ngFor="let images of  Image">
+              <div class="teamss">
 
-
-
-
-                  <div class="teamdiv" *ngFor="let team of Team">
-                    <img class="imageteam" [src]="images.image1">
-                    <div [ngClass]="'IneerDivisionteam'">
-                      <h2 [ngClass]="'HEADERTEAM'"> {{team.ManojRoka}}</h2>
-                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionM}}</h6>
-                    </div>
-                  </div>
-
-                  <div class="teamdiv" *ngFor="let team of Team">
-                    <img class="imageteam" [src]="images.image2">
-                    <div [ngClass]="'IneerDivisionteam'">
-                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Sresta}}</h2>
-                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionS}}</h6>
-                    </div>
-                  </div>
-
-                  <div class="teamdiv" *ngFor="let team of Team">
-                    <img class="imageteam" [src]="images.image3">
-                    <div [ngClass]="'IneerDivisionteam'">
-                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Gaurab}}</h2>
-                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionG}}</h6>
-                    </div>
-                  </div>
-
-                  <div class="teamdiv" *ngFor="let team of Team">
-                    <img class="imageteam" [src]="images.image4">
-                    <div [ngClass]="'IneerDivisionteam'">
-                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Amit}}</h2>
-                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionAm}}</h6>
-                    </div>
-                  </div>
-
-                  <div class="teamdiv" *ngFor="let team of Team">
-                    <img class="imageteam" [src]="images.image5">
-                    <div [ngClass]="'IneerDivisionteam'">
-                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Dinesh}}</h2>
-                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionD}}</h6>
-                    </div>
-                  </div>
-
-                  <div class="teamdiv" *ngFor="let team of Team">
-                    <img class="imageteam" [src]="images.image6">
-                    <div [ngClass]="'IneerDivisionteam'">
-                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Anjesh}}</h2>
-                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionA}}</h6>
-                    </div>
-
-
-                  </div>
-                  <div class="teamdiv" *ngFor="let team of Team">
-                    <img class="imageteam" [src]="images.image7">
-                    <div [ngClass]="'IneerDivisionteam'">
-                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Sabitri}}</h2>
-                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionSa}}</h6>
-                    </div>
-                  </div>
-
-                  <div class="teamdiv" *ngFor="let team of Team">
-                    <img class="imageteam" [src]="images.image8">
-                    <div [ngClass]="'IneerDivisionteam'">
-                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Abd}}</h2>
-                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionAbd}}</h6>
-                    </div>
-                  </div>
-
-                  <div class="teamdiv" *ngFor="let team of Team">
-                    <img class="imageteam" [src]="images.image10">
-                    <div [ngClass]="'IneerDivisionteam'">
-                      <h2 [ngClass]="'HEADERTEAM'"> {{team.Niraj}}</h2>
-                      <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionN}}</h6>
-                    </div>
-
-                  </div>
+                <div class="teamsheader">
+                  <div [ngClass]="'ArrowH'" id="TeamsId"></div>
+                  <h2 id="teamsh2">GreenCodes Team</h2>
+                  <p id="teamsp">Young and talented members</p>
                 </div>
 
+
+                <div class="slides-team1" *ngFor="let images of  Image">
+
+
+                  <div class="teamdiv1" *ngFor="let team of Team">
+                    <img class="imageteam1" [src]="images.image1">
+                    <div [ngClass]="'IneerDivisionteam1'">
+                      <h2 [ngClass]="'HEADERTEAM1'"> {{team.ManojRoka}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM21'">{{team.PositionM}}</h6>
+                    </div>
+                  </div>
+
+
+                  <div class="teamdiv1" *ngFor="let team of Team">
+                    <img class="imageteam1" [src]="images.image2" [ngStyle]="{
+                                 'object-position':'20% 20%'
+                    }">
+                    <div [ngClass]="'IneerDivisionteam1'">
+                      <h2 [ngClass]="'HEADERTEAM1'"> {{team.Sresta}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM21'">{{team.PositionS}}</h6>
+                    </div>
+                  </div>
+
+
+
+
+
+
+                  <div class="teamdiv1" *ngFor="let team of Team">
+                    <img class="imageteam1" [src]="images.image3">
+                    <div [ngClass]="'IneerDivisionteam1'">
+                      <h2 [ngClass]="'HEADERTEAM1'"> {{team.Gaurab}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM21'">{{team.PositionG}}</h6>
+                    </div>
+                  </div>
+                  1
+
+
+
+
+
+                  <div class="teamdiv1" *ngFor="let team of Team">
+                    <img class="imageteam1" [src]="images.image4">
+                    <div [ngClass]="'IneerDivisionteam1'">
+                      <h2 [ngClass]="'HEADERTEAM1'"> {{team.Amit}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM21'">{{team.PositionAm}}</h6>
+                    </div>
+                  </div>
+
+                  <div class="teamdiv1" *ngFor="let team of Team">
+                    <img class="imageteam1" [src]="images.image5">
+                    <div [ngClass]="'IneerDivisionteam1'">
+                      <h2 [ngClass]="'HEADERTEAM1'"> {{team.Dinesh}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM21'">{{team.PositionD}}</h6>
+                    </div>
+                  </div>
+                  <div class="teamdiv1" *ngFor="let team of Team">
+                    <img class="imageteam1" [src]="images.image6">
+                    <div [ngClass]="'IneerDivisionteam1'">
+                      <h2 [ngClass]="'HEADERTEAM1'"> {{team.Anjesh}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM211'">{{team.PositionA}}</h6>
+                    </div>
+
+
+                  </div>
+
+
+                  <div class="teamdiv1" *ngFor="let team of Team">
+                    <img class="imageteam1" [src]="images.image7" [ngStyle]="{
+                                 'object-position':'10% 10%'
+                    }">
+                    <div [ngClass]="'IneerDivisionteam1'">
+                      <h2 [ngClass]="'HEADERTEAM1'"> {{team.Sabitri}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM21'">{{team.PositionSa}}</h6>
+                    </div>
+                  </div>
+
+                  <div class="teamdiv1" *ngFor="let team of Team">
+                    <img class="imageteam1" [src]="images.image8">
+                    <div [ngClass]="'IneerDivisionteam1'">
+                      <h2 [ngClass]="'HEADERTEAM1'"> {{team.Abd}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM21'">{{team.PositionAbd}}</h6>
+                    </div>
+                  </div>
+
+                  <div class="teamdiv1" *ngFor="let team of Team">
+                    <img class="imageteam1" [src]="images.image10" [ngStyle]="{
+                                 'object-position':'10% 10%'
+                    }">
+                    <div [ngClass]="'IneerDivisionteam1'">
+                      <h2 [ngClass]="'HEADERTEAM1'"> {{team.Niraj}}</h2>
+                      <h6 [ngClass]="'HEADERTEAM21'">{{team.PositionN}}</h6>
+                    </div>
+
+                  </div>
+
+                </div>
               </div>
+
             </div>
+
+
+
+
           </app-common-modal>
 
 
@@ -501,27 +529,37 @@
     </div>
     <div class="sliderforimages">
       <div class="innerslide" *ngFor="let images of Image">
-        <input type="radio" name="ra1-btn" id="ra1">
-        <input type="radio" name="ra1-btn" id="ra2">
-        <input type="radio" name="ra1-btn" id="ra3">
-        <input type="radio" name="ra1-btn" id="ra4">
+
+        <owl-carousel-o [options]="customOptions">
+          <ng-template carouselSlide>
+            <div class="slide">
+              <img class="imgslide" [src]="images.image11">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+              <img class="imgslide" [src]="images.image12">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+              <img class="imgslide" [src]="images.image13">
+            </div>
+          </ng-template>
+
+          <ng-template carouselSlide>
+            <div class="slide">
+              <img class="imgslide" [src]="images.image14">
+            </div>
+          </ng-template>
+        </owl-carousel-o>
 
 
-        <div class="slide first">
-          <img class="imgslide" [src]="images.image11">
-        </div>
 
 
 
-        <div class="slide">
-          <img class="imgslide" [src]="images.image12">
-        </div>
-        <div class="slide">
-          <img class="imgslide" [src]="images.image13">
-        </div>
-        <div class="slide">
-          <img class="imgslide" [src]="images.image14">
-        </div>
+
+
 
 
 
@@ -529,15 +567,7 @@
 
 
 
-      <!--manual navigation-->
-      <div class="manual-nav">
-        <label for="ra1" class="ma-btn"></label>
-        <label for="ra2" class="ma-btn"></label>
-        <label for="ra3" class="ma-btn"></label>
-        <label for="ra4" class="ma-btn"></label>
 
-
-      </div>
 
     </div>
 
@@ -887,8 +917,8 @@
   </div>
 </div>
 <!--teams-->
-<div class="container containermargin">
-  <div #teams class="teams">
+<div #teams class="container containermargin" [ngStyle]="{'margin-top':'-25rem'}">
+  <div class="teams">
 
     <div class="teamsheader">
       <div [ngClass]="'ArrowH'" id="TeamsId"></div>
@@ -897,95 +927,132 @@
     </div>
 
 
-    <div class="slides-team">
-      <div #innerslide11 class="inner-slide11" *ngFor="let images of  Image">
+    <div class="slides-team" *ngFor="let images of  Image">
 
-
-
-
-        <div class="teamdiv" *ngFor="let team of Team">
-          <img class="imageteam" [src]="images.image1">
-          <div [ngClass]="'IneerDivisionteam'">
-            <h2 [ngClass]="'HEADERTEAM'"> {{team.ManojRoka}}</h2>
-            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionM}}</h6>
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <div class="teamdiv" *ngFor="let team of Team">
+            <img class="imageteam" [src]="images.image1">
+            <div [ngClass]="'IneerDivisionteam'">
+              <h2 [ngClass]="'HEADERTEAM'"> {{team.ManojRoka}}</h2>
+              <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionM}}</h6>
+            </div>
           </div>
-        </div>
-
-        <div class="teamdiv" *ngFor="let team of Team">
-          <img class="imageteam" [src]="images.image2">
-          <div [ngClass]="'IneerDivisionteam'">
-            <h2 [ngClass]="'HEADERTEAM'"> {{team.Sresta}}</h2>
-            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionS}}</h6>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="teamdiv" *ngFor="let team of Team">
+            <img class="imageteam" [src]="images.image2">
+            <div [ngClass]="'IneerDivisionteam'">
+              <h2 [ngClass]="'HEADERTEAM'"> {{team.Sresta}}</h2>
+              <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionS}}</h6>
+            </div>
           </div>
-        </div>
 
-        <div class="teamdiv" *ngFor="let team of Team">
-          <img class="imageteam" [src]="images.image3">
-          <div [ngClass]="'IneerDivisionteam'">
-            <h2 [ngClass]="'HEADERTEAM'"> {{team.Gaurab}}</h2>
-            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionG}}</h6>
-          </div>
-        </div>
+        </ng-template>
+        <ng-template carouselSlide>
 
-        <div class="teamdiv" *ngFor="let team of Team">
-          <img class="imageteam" [src]="images.image4">
-          <div [ngClass]="'IneerDivisionteam'">
-            <h2 [ngClass]="'HEADERTEAM'"> {{team.Amit}}</h2>
-            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionAm}}</h6>
-          </div>
-        </div>
 
-        <div class="teamdiv" *ngFor="let team of Team">
-          <img class="imageteam" [src]="images.image5">
-          <div [ngClass]="'IneerDivisionteam'">
-            <h2 [ngClass]="'HEADERTEAM'"> {{team.Dinesh}}</h2>
-            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionD}}</h6>
-          </div>
-        </div>
 
-        <div class="teamdiv" *ngFor="let team of Team">
-          <img class="imageteam" [src]="images.image6">
-          <div [ngClass]="'IneerDivisionteam'">
-            <h2 [ngClass]="'HEADERTEAM'"> {{team.Anjesh}}</h2>
-            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionA}}</h6>
+          <div class="teamdiv" *ngFor="let team of Team">
+            <img class="imageteam" [src]="images.image3">
+            <div [ngClass]="'IneerDivisionteam'">
+              <h2 [ngClass]="'HEADERTEAM'"> {{team.Gaurab}}</h2>
+              <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionG}}</h6>
+            </div>
           </div>
 
 
-        </div>
-        <div class="teamdiv" *ngFor="let team of Team">
-          <img class="imageteam" [src]="images.image7">
-          <div [ngClass]="'IneerDivisionteam'">
-            <h2 [ngClass]="'HEADERTEAM'"> {{team.Sabitri}}</h2>
-            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionSa}}</h6>
+        </ng-template>
+        <ng-template carouselSlide>
+
+
+          <div class="teamdiv" *ngFor="let team of Team">
+            <img class="imageteam" [src]="images.image4">
+            <div [ngClass]="'IneerDivisionteam'">
+              <h2 [ngClass]="'HEADERTEAM'"> {{team.Amit}}</h2>
+              <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionAm}}</h6>
+            </div>
           </div>
-        </div>
+        </ng-template>
+        <ng-template carouselSlide>
 
-        <div class="teamdiv" *ngFor="let team of Team">
-          <img class="imageteam" [src]="images.image8">
-          <div [ngClass]="'IneerDivisionteam'">
-            <h2 [ngClass]="'HEADERTEAM'"> {{team.Abd}}</h2>
-            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionAbd}}</h6>
-          </div>
-        </div>
 
-        <div class="teamdiv" *ngFor="let team of Team">
-          <img class="imageteam" [src]="images.image10">
-          <div [ngClass]="'IneerDivisionteam'">
-            <h2 [ngClass]="'HEADERTEAM'"> {{team.Niraj}}</h2>
-            <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionN}}</h6>
+          <div class="teamdiv" *ngFor="let team of Team">
+            <img class="imageteam" [src]="images.image5">
+            <div [ngClass]="'IneerDivisionteam'">
+              <h2 [ngClass]="'HEADERTEAM'"> {{team.Dinesh}}</h2>
+              <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionD}}</h6>
+            </div>
           </div>
 
-        </div>
+
+        </ng-template>
+        <ng-template carouselSlide>
 
 
 
 
 
+          <div class="teamdiv" *ngFor="let team of Team">
+            <img class="imageteam" [src]="images.image6">
+            <div [ngClass]="'IneerDivisionteam'">
+              <h2 [ngClass]="'HEADERTEAM'"> {{team.Anjesh}}</h2>
+              <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionA}}</h6>
+            </div>
 
 
-      </div>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
 
+          <div class="teamdiv" *ngFor="let team of Team">
+            <img class="imageteam" [src]="images.image7">
+            <div [ngClass]="'IneerDivisionteam'">
+              <h2 [ngClass]="'HEADERTEAM'"> {{team.Sabitri}}</h2>
+              <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionSa}}</h6>
+            </div>
+          </div>
+
+
+
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="teamdiv" *ngFor="let team of Team">
+            <img class="imageteam" [src]="images.image8">
+            <div [ngClass]="'IneerDivisionteam'">
+              <h2 [ngClass]="'HEADERTEAM'"> {{team.Abd}}</h2>
+              <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionAbd}}</h6>
+            </div>
+          </div>
+
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="teamdiv" *ngFor="let team of Team">
+            <img class="imageteam" [src]="images.image10">
+            <div [ngClass]="'IneerDivisionteam'">
+              <h2 [ngClass]="'HEADERTEAM'"> {{team.Niraj}}</h2>
+              <h6 [ngClass]="'HEADERTEAM2'">{{team.PositionN}}</h6>
+            </div>
+
+          </div>
+        </ng-template>
+      </owl-carousel-o>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -995,7 +1062,18 @@
 
 
   </div>
+
 </div>
+
+
+
+
+
+
+
+
+
+
 <!--teams-->
 
 <!--Forms Contact-->

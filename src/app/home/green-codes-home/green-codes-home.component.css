@@ -180,72 +180,42 @@ About
 
 .sliderforimages {
   position: absolute;
+  background: #f6f6f8;
+  width: 35%;
 
-  height: 35rem;
-  width: 40%;
-
-  max-width: 45rem;
   top: 5em;
   right: 5em;
 
-  display: flex;
   border-radius: 10px;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+
   box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.1);
-}
 
+  transition: transform 0.5s;
+}
+.sliderforimages:hover {
+  transform: translateY(-10px);
+}
 .innerslide {
-  display: flex;
+  padding-top: 0;
+  padding-bottom: 10px;
+  margin: auto;
   height: 35rem;
   width: 100%;
-  max-width: 45rem;
 }
-.innerslide input {
-  display: none;
-  position: relative;
-}
-.imgslide {
-  display: block;
 
-  height: 35rem;
+.imgslide {
+  height: 30rem;
+
+  object-fit: cover;
 }
+
 .slide {
-  width: 100%;
-  max-width: 45rem;
-  height: 35rem;
-  transition: 2s;
-}
-.manual-nav {
-  position: absolute;
-  top: 32rem;
-  display: flex;
-  justify-content: center;
-}
-.ma-btn {
-  padding: 4px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 1s;
-}
-.ma-btn:not(:last-child) {
-  margin-right: 2rem;
-}
-.ma-btn {
-  background-color: #c60021;
-}
-#ra1:checked ~ .first {
-  margin-left: 0rem;
-}
-#ra2:checked ~ .first {
-  margin-left: -100%;
-}
-#ra3:checked ~ .first {
-  margin-left: -200%;
-}
-#ra4:checked ~ .first {
-  margin-left: -300%;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+
+  position: relative;
+  top: 0;
 }
 
 #AboutId {
@@ -313,7 +283,10 @@ services
 /*
 projects
 */
-
+.Pictures {
+  object-fit: fill;
+  
+}
 .titleprojects {
   width: 100%;
 
@@ -339,19 +312,22 @@ projects
   background-color: #f6f6f8;
 }
 .projectsinner {
+  width: 81.5%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+
   background: white;
   margin-top: 4rem;
   background-color: #f6f6f8;
   margin-bottom: 4rem;
 }
 .projectsinner div {
-  flex-basis: 12.6%;
+  flex: 1 1 10%;
 }
 .btn {
-  width: 10.6rem;
+  width: 9rem;
   border: 2px solid rgb(128, 121, 121);
   background-color: rgb(128, 121, 121);
 }
@@ -540,8 +516,6 @@ projects
     "ci-1 ci-2"
     "ci-1 ci-2"
     "ci-1  ci-2";
-
-  grid-gap: 1.5rem;
 }
 .PROJECTImages1 .Pictures {
   width: 100%;
@@ -763,7 +737,6 @@ projects
   margin-right: 14rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-  grid-gap: 1rem;
 }
 
 .PROJECTImages5 .Pictures {
@@ -782,7 +755,7 @@ projects
   bottom: 0;
   left: 0;
   right: 0;
-  visibility: hidden;
+
   width: 100%;
   height: 50rem;
   background: #292a39;
@@ -943,9 +916,11 @@ projects
 /*
 teams
 */
-.containermargin {
-  margin-top: -25rem;
+
+.formargin {
+  margin-top: 0 !important;
 }
+
 .teams {
   height: 50rem;
   background-color: #e3e3e3;
@@ -971,33 +946,21 @@ teams
 }
 .slides-team {
   position: relative;
-
-  height: 24rem;
 }
 
 .imageteam {
-  width: 21rem;
   height: 24rem;
+
   object-fit: cover;
-  pointer-events: auto;
-  cursor: pointer;
-}
-
-.inner-slide11 {
-  display: flex;
-
-  width: 100%;
-
-  pointer-events: none;
-  overflow: hidden;
-  align-items: center;
 }
 
 .teamdiv {
-  width: 100%;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
 
   position: relative;
-  cursor: grab;
+  top: 0;
 }
 
 .IneerDivisionteam {
@@ -1006,8 +969,7 @@ teams
   right: 0;
   left: 0;
   top: 0;
-  width: 21rem;
-  height: 24rem;
+
   background: #292a39;
   color: black;
   opacity: 0;
@@ -1016,11 +978,11 @@ teams
   transition: visibility 0s, opacity 0.5s linear;
 }
 .teamdiv:hover {
-  cursor: pointer;
+  cursor: grab;
 }
 .teamdiv:hover .IneerDivisionteam {
-  width: 21rem;
-  height: 24rem;
+  width: 100%;
+  height: 100%;
   visibility: visible;
   opacity: 0.9;
 }
@@ -1159,7 +1121,6 @@ Footer
   display: block;
 }
 .FooterInner {
-  z-index: 1;
   height: 8rem;
   width: 22%;
   padding: 6rem 0;
@@ -1173,7 +1134,7 @@ Footer
 .Icons {
   height: 6rem;
   width: 20%;
-  z-index: 1;
+
   position: relative;
   bottom: 50%;
   left: 70%;

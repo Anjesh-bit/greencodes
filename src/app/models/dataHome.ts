@@ -10,7 +10,7 @@ import {
   AllPROJECTS,
   ForImageCarousal,
   ForModal,
-  
+
   ForImageProjects,
 } from './datamodel';
 

@@ -147,3 +147,48 @@ slider
   top: 4.6rem;
 }
 
+/* images*/
+.teamss{
+  background: #fff;
+}
+.slides-team1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.slides-team1 > div > img {
+  width: 100%;
+  vertical-align: middle;
+  border-style: none;
+  height: 100%;
+  max-width: 100%;
+
+  object-fit: cover;
+}
+.slides-team1 > div {
+  width: 450px;
+  height: 350px;
+}
+.teamdiv1 {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+.IneerDivisionteam1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.HEADERTEAM1 {
+  color: #c60021;
+  text-align: right;
+}
+.HEADERTEAM21 {
+  display: block;
+  color: #c60021;
+  text-align: right;
+}
+.teamdiv1:hover {
+  transform: translateX(-10px);
+}

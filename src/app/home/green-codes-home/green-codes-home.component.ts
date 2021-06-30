@@ -1,8 +1,10 @@
+import { ForModal } from './../../models/datamodel';
 import { style, transition } from '@angular/animations';
 import { PROJECTS } from './../../models/dataHome';
 import { Router } from '@angular/router';
 import { Renderer2 } from '@angular/core';
 import { CommonModalService } from 'src/app/common-modal.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 import {
   Component,
@@ -47,6 +49,7 @@ export class GreenCodesHomeComponent implements AfterViewInit {
   frontarrow = '../assets/icons/left-arrow.png';
   backarrow = '../assets/icons/right-arrow.png';
   Expand = '../assets/icons/expand.png';
+  showitems!: false;
   courses = ArrayHome;
   services = SERVICE;
   projects = PROJECTS;
@@ -119,6 +122,73 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       observer.next(new Date().getFullYear().toString());
     }, 1000);
   });
+  customOptionss: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    navSpeed: 700,
+    autoplay: true,
+
+    autoplayTimeout: 7000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+    },
+    nav: false,
+  };
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    navSpeed: 700,
+    autoplay: true,
+
+    autoplayTimeout: 7000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      700: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      },
+      1200: {
+        items: 4,
+      },
+      1500: {
+        items: 5,
+      },
+      1800: {
+        items: 6,
+      },
+    },
+    nav: false,
+  };
+
+  SliderOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    navSpeed: 700,
+    autoplay: true,
+
+    autoplayTimeout: 7000,
+    responsive: {
+      1200: {
+        items: 1,
+      },
+    },
+    nav: false,
+  };
   constructor(
     private FormBuild: FormBuilder,
     private router: Router,
@@ -130,14 +200,21 @@ export class GreenCodesHomeComponent implements AfterViewInit {
   ngOnInit() {
     this.FormClasses();
     this.CreatBuildForm();
+
+    this.GetAllContent();
+    this.getAllimages();
+  }
+
+  showImage(params: any) {
+    if (params == 'menu') {
+      this.List.style.visibility = 'visible';
+    }
+    console.log('hey hey cl');
   }
 
   @ViewChild('innerslide11') ForSlides!: ElementRef;
   @ViewChild('list') listmodal!: ElementRef;
 
-  showImage() {
-    this.List.style.visibility = 'visible';
-  }
   FormClasses() {
     this.ContactForm = this.Classes[0].ContactForm;
     this.InnerContact = this.Classes[0].InnerContact;
@@ -167,96 +244,19 @@ export class GreenCodesHomeComponent implements AfterViewInit {
   @ViewChild('close') Modalclose!: ElementRef;
   ngAfterViewInit() {
     this.NavList = this.nameElement.nativeElement;
-
+    this.List = this.listmodal.nativeElement;
     this.Toplink = this.nameElementref.nativeElement;
 
     this.te = this.teamofshow.nativeElement;
     this.MouseDown = this.ForSlides.nativeElement;
+
     this.ForModal = this.Modal.nativeElement;
-    this.List = this.listmodal.nativeElement;
+
     this.modalclose = this.Modalclose.nativeElement;
 
-    this.MouseDownn();
-    this.MouseEnter();
-    this.MouseUp();
-    this.MouseMove();
-
     //for the modal
-
-    this.MouseDownnmodal();
-    this.MouseEntermodal();
-    this.MouseUpmodal();
-    this.MouseMovemodal();
-
-    this.GetAllContent();
-    this.getAllimages();
-  }
-  MouseDownn() {
-    this.renderer.listen(this.Modal.nativeElement, 'mousedown', (event) => {
-      this.isDown = true;
-      this.startX = event.pageX - this.ForModal.offsetLeft;
-      this.scrollLeft = this.ForModal.scrollLeft;
-    });
   }
 
-  MouseEnter() {
-    this.renderer.listen(this.Modal.nativeElement, 'mouseenter', (event) => {
-      this.isDown = false;
-      this.Modal.nativeElement.style.cursor = 'grab';
-    });
-  }
-  MouseUp() {
-    this.renderer.listen(this.Modal.nativeElement, 'mouseup', (event) => {
-      this.isDown = false;
-    });
-  }
-
-  MouseMove() {
-    this.renderer.listen(this.Modal.nativeElement, 'mousemove', (event) => {
-      if (!this.isDown) return;
-      event.preventDefault();
-      const mouse = event.pageX - this.ForModal.offsetLeft;
-      const relative = mouse - this.startX;
-
-      this.ForModal.scrollLeft = this.scrollLeft - relative;
-    });
-  }
-  //for the modal
-
-  MouseDownnmodal() {
-    this.renderer.listen(this.ForSlides.nativeElement, 'mousedown', (event) => {
-      this.isDown = true;
-      this.startX = event.pageX - this.MouseDown.offsetLeft;
-      this.scrollLeft = this.MouseDown.scrollLeft;
-    });
-  }
-
-  MouseEntermodal() {
-    this.renderer.listen(
-      this.ForSlides.nativeElement,
-      'mouseenter',
-      (event) => {
-        this.isDown = false;
-        this.ForSlides.nativeElement.style.cursor = 'grab';
-      }
-    );
-  }
-  MouseUpmodal() {
-    this.renderer.listen(this.ForSlides.nativeElement, 'mouseup', (event) => {
-      this.isDown = false;
-    });
-  }
-
-  MouseMovemodal() {
-    this.renderer.listen(this.ForSlides.nativeElement, 'mousemove', (event) => {
-      if (!this.isDown) return;
-      event.preventDefault();
-      const mouse = event.pageX - this.MouseDown.offsetLeft;
-      const relative = mouse - this.startX;
-
-      this.MouseDown.scrollLeft = this.scrollLeft - relative;
-    });
-  }
   Submit() {}
   @HostListener('document:scroll')
   onScroll() {
@@ -288,6 +288,7 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.magneto = false;
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
+      this.te.classList.add('formargin');
     }
   }
 
@@ -300,6 +301,8 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.magneto = false;
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
+
+      this.te.classList.remove('formargin');
     }
   }
   ForBTnAllDR(params: string) {
@@ -311,6 +314,7 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.magneto = false;
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
+      this.te.classList.remove('formargin');
     }
   }
   ForBTnAlleC(params: string) {
@@ -322,6 +326,7 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.magneto = false;
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
+      this.te.classList.remove('formargin');
     }
   }
   ForBTnAllMag(params: string) {
@@ -333,6 +338,7 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.ecomm = false;
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
+      this.te.classList.remove('formargin');
     }
   }
   ForBTnAllword(params: string) {
@@ -344,6 +350,7 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.magneto = false;
       this.showpicture.ecomm = false;
       this.showpicture.Condition = false;
+      this.te.classList.remove('formargin');
     }
   }
 
@@ -596,6 +603,7 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       behavior: 'smooth',
     });
   }
+  closed(params: any) {}
   openModal(id: string) {
     this.CommonModal.open(id);
   }
