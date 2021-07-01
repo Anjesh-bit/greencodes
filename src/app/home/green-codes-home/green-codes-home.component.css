@@ -1,6 +1,8 @@
 /*
 Header
 */
+
+
 .container {
   width: 100%;
   max-width: 100%;
@@ -285,7 +287,6 @@ projects
 */
 .Pictures {
   object-fit: fill;
-  
 }
 .titleprojects {
   width: 100%;
@@ -342,583 +343,423 @@ projects
   top: 4rem;
 }
 .grid {
-  margin: auto;
-  width: 100%;
+  margin-left: 10em;
+  margin-right: 10em;
 }
 .PROJECTImages {
   display: grid;
-  margin-left: 10rem;
-  margin-right: 10rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas:
-    "img-1 img-2 img-3 img-4"
-    "img-1 img-5 img-3 img-4"
-    "img-1 img-5 img-3  img-4"
-    "img-7  img-5  img-6  img-4 ";
+  grid-auto-rows: 100px 300px;
+  grid-auto-flow: dense;
 }
 .All {
   width: 100%;
-  height: 25rem;
+  height: 100%;
   position: relative;
 }
-.All:hover {
+.itemsAll {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.itemsAll .image-All {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.itemsAll .image-All img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
-.PROJECTImages .Pictures {
-  width: 100%;
-  height: 25rem;
+.itemsAll:hover .image-All img {
+  transform: scale(1.5);
 }
-
-.inner-all1 {
+.inner-all {
+  opacity: 0;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  background: #292a39;
+  color: white;
+  opacity: 0;
   visibility: hidden;
-  height: 50rem;
-  width: 100%;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
 }
-.All:hover .inner-all1 {
+.itemsAll:hover .inner-all {
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
   visibility: visible;
-  opacity: 0.9;
-}
-.inner-all2 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  height: 25rem;
-  width: 100%;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-.All:hover .inner-all2 {
-  visibility: visible;
-  opacity: 0.9;
-}
-.inner-all3 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  height: 50rem;
-  width: 100%;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-.All:hover .inner-all3 {
-  visibility: visible;
-  opacity: 0.9;
-}
-.inner-all4 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  height: 75rem;
-  width: 100%;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-.All:hover .inner-all4 {
-  visibility: visible;
-  opacity: 0.9;
-}
-.inner-all5 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  height: 50rem;
-  width: 100%;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-.All:hover .inner-all5 {
-  visibility: visible;
-  opacity: 0.9;
-}
-.inner-all6 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  height: 25rem;
-  width: 100%;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-.All:hover .inner-all6 {
-  visibility: visible;
-  opacity: 0.9;
-}
-.inner-all7 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  height: 25rem;
-  width: 100%;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-.All:hover .inner-all7 {
-  visibility: visible;
-  opacity: 0.9;
-}
-.gridci {
-  margin: auto;
-  width: 70%;
-  position: relative;
-}
-.Ci-modal {
-  width: 100%;
-  height: 50rem;
-  position: relative;
-}
-.PROJECTImages1 {
-  display: grid;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  grid-template-columns: repeat(2, 0.5fr);
-  grid-template-rows: auto;
-  grid-template-areas:
-    "ci-1 ci-2"
-    "ci-1 ci-2"
-    "ci-1  ci-2";
-}
-.PROJECTImages1 .Pictures {
-  width: 100%;
-  height: 25rem;
-}
-.inner-word-ci1 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 50rem;
-  visibility: hidden;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-.inner-word-ci2 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 50rem;
-  visibility: hidden;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-.Ci-modal:hover .inner-word-ci1 {
-  visibility: visible;
-  opacity: 0.9;
-}
-.Ci-modal:hover .inner-word-ci2 {
-  visibility: visible;
-  opacity: 0.9;
-}
-#ci1 {
-  grid-area: ci-1;
-  min-height: 50rem;
-}
-#ci2 {
-  grid-area: ci-2;
-
-  min-height: 50rem;
-}
-#ci-1-modal {
-  min-height: 50rem;
-}
-#ci-2-modal {
-  min-height: 50rem;
-}
-.griddr {
-  margin: auto;
-  width: 100%;
-}
-
-.PROJECTImages2 {
-  display: grid;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
-}
-
-.PROJECTImages2 .Pictures {
-  width: 100%;
-  height: 50rem;
-}
-
-#Dru-modal {
-  width: 30%;
-  height: 50rem;
-  margin: auto;
-  position: relative;
-}
-#dru-pictures {
-  width: 100%;
-  height: 50rem;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.inner-drup {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  width: 100%;
-  height: 50rem;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-#Dru-modal:hover .inner-drup {
-  visibility: visible;
-  opacity: 0.9;
-}
-
-.gridec {
-  margin: auto;
-  width: 100%;
-}
-.PROJECTImages3 {
-  display: grid;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
-}
-
-.PROJECTImages3 .Pictures {
-  height: 50rem;
-  width: 100%;
-}
-#comal-modal {
-  height: 50rem;
-  width: 30%;
-  margin: auto;
-  position: relative;
-}
-
-#images-eccc {
-  position: absolute;
-  height: 50rem;
-  width: 100%;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-.inner-eccc {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  width: 100%;
-  height: 50rem;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-#comal-modal:hover .inner-eccc {
-  visibility: visible;
-  opacity: 0.9;
-}
-
-.gridmg {
-  margin: auto;
-  width: 100%;
-}
-.PROJECTImages4 {
-  display: grid;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
-}
-
-.PROJECTImages4 .Pictures {
-  width: 100%;
-  height: 50rem;
-}
-#magento-modal {
-  width: 32%;
-  height: 50rem;
-  margin: auto;
-  position: relative;
-}
-#mag-images {
-  position: absolute;
-  width: 100%;
-  height: 50rem;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.inner-word-magento {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  width: 100%;
-  height: 50rem;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-#magento-modal:hover .inner-word-magento {
-  visibility: visible;
-  opacity: 0.9;
-}
-.gridwo {
-  margin: auto;
-  width: 100%;
-}
-.PROJECTImages5 {
-  display: grid;
-  position: relative;
-  margin-left: 14rem;
-  margin-right: 14rem;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-}
-
-.PROJECTImages5 .Pictures {
-  width: 100%;
-
-  height: 50rem;
-}
-.word-modal {
-  position: relative;
-  width: 100%;
-  height: 50rem;
-}
-.inner-word1 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  width: 100%;
-  height: 50rem;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-.word-modal:hover .inner-word1 {
-  visibility: visible;
-  opacity: 0.9;
-}
-.inner-word2 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  width: 100%;
-  height: 50rem;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-.word-modal:hover .inner-word2 {
-  visibility: visible;
-  opacity: 0.9;
-}
-.inner-word3 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  width: 100%;
-  height: 50rem;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-.word-modal:hover .inner-word3 {
-  visibility: visible;
-  opacity: 0.9;
-}
-.inner-word4 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  width: 100%;
-  height: 50rem;
-  background: #292a39;
-  opacity: 0;
-  transition: visibility 0s opacity 0.5s ease-in-out;
-  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
-}
-.word-modal:hover .inner-word4 {
-  visibility: visible;
-  opacity: 0.9;
-}
-#word-modal0 {
-  min-height: 50rem;
-}
-
-#word-modal1 {
-  min-height: 50rem;
-}
-#word-images1 {
-  min-height: 50rem;
-}
-#word-images2 {
-  min-height: 50rem;
-}
-
-#word-images3 {
-  min-height: 50rem;
-}
-#word-images4 {
-  min-height: 50rem;
-}
-
-#word-modal2 {
-  min-height: 50rem;
-}
-#word-modal3 {
-  min-height: 50rem;
-}
-#img1 {
-  grid-area: img-1;
-  min-height: 50rem;
-}
-#img2 {
-  grid-area: img-2;
-}
-#img3 {
-  min-height: 50rem;
-  grid-area: img-3;
-}
-#img4 {
-  grid-area: img-4;
-  min-height: 75rem;
-}
-#img5 {
-  grid-area: img-5;
-  min-height: 50rem;
-}
-#img6 {
-  grid-area: img-6;
-}
-#img7 {
-  grid-area: img-7;
-}
-#Brad {
-  min-height: 50rem;
-}
-#monster {
-  min-height: 50rem;
-}
-#north {
-  min-height: 75rem;
-}
-#tensipen {
-  min-height: 50rem;
-}
-
-.showMargin {
-  margin-top: -25rem;
-}
-.Pictures {
-  transition: opacity 0.5s ease-out;
-}
-
-.hide {
-  display: none;
 }
 .Common-image {
-  display: block;
-  height: 2rem;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  cursor: pointer;
+  width: 2rem;
+  transition: 0.3s ease;
 }
-
 .inner-allheader1 {
-  cursor: pointer;
-
-  color: white;
   text-align: center;
-  vertical-align: middle;
+  font-size: 1.2rem;
 }
+.width-1 {
+  grid-column: span 1;
+  grid-row: span 4;
+}
+.width-2 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.width-3 {
+  grid-column: span 1;
+  grid-row: span 6;
+}
+.width-4 {
+  grid-column: span 1;
+  grid-row: span 6;
+}
+.width-5 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.width-6 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.width-7 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+/*wordpress */
+.gridwo {
+  margin-left: 10em;
+  margin-right: 10em;
+}
+.PROJECTImages5 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-auto-flow: dense;
+}
+.word-modal {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.items-word {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image-word {
+  width: 100%;
+  height: 75rem;
+  min-height: 75rem;
+  overflow: hidden;
+}
+.image-word img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.items-word:hover .image-word img {
+  transform: scale(1.5);
+}
+.inner-word1 {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #292a39;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.items-word:hover .inner-word1 {
+  width: 100%;
+  height: 75rem;
+  min-height: 75rem;
+  opacity: 0.8;
+  visibility: visible;
+}
+
+/*ci */
+
+.gridci {
+  margin-left: 10em;
+  margin-right: 10em;
+}
+.PROJECTImages1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-auto-flow: dense;
+}
+.Ci-modal {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.items-ci {
+  width: 100%;
+  height: 81%;
+  position: relative;
+}
+.image-ci {
+  width: 100%;
+  min-height: 75rem;
+  height: 75rem;
+  overflow: hidden;
+}
+.image-ci img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.items-ci:hover .image-ci img {
+  transform: scale(1.5);
+}
+.inner-word-ci1 {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #292a39;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.items-ci:hover .inner-word-ci1 {
+  min-height: 75rem;
+  height: 75rem;
+
+  width: 100%;
+  opacity: 0.8;
+  visibility: visible;
+}
+
+/*magneto */
+
+.PROJECTImages4 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  grid-auto-flow: dense;
+}
+.items-magento {
+  width: 42%;
+  height: 48%;
+  position: relative;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.magento-modal {
+  width: 100%;
+  height: 38rem;
+  min-height: 38rem;
+  position: relative;
+}
+.image-magneto {
+  width: 100%;
+  height: 38rem;
+
+  overflow: hidden;
+}
+.image-magneto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.inner-word-magento {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #292a39;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.magento-modal:hover .image-magneto img {
+  transform: scale(1.5);
+}
+.magento-modal:hover .inner-word-magento {
+  width: 100%;
+  height: 38rem;
+  min-height: 38rem;
+  opacity: 0.8;
+  visibility: visible;
+}
+
+/* eccomerce*/
+
+.PROJECTImages3 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  grid-auto-flow: dense;
+}
+.items-ecommerce {
+  width: 40%;
+  height: 52%;
+  position: relative;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.comal-modal {
+  width: 100%;
+  min-height: 38rem;
+  height: 38rem;
+  position: relative;
+}
+.image-eccomerce {
+  width: 100%;
+  min-height: 38rem;
+  height: 38rem;
+  overflow: hidden;
+}
+.image-eccomerce img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.inner-eccc {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: #292a39;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.items-ecommerce:hover .image-eccomerce img {
+  transform: scale(1.5);
+}
+.items-ecommerce:hover .inner-eccc {
+  width: 100%;
+  min-height: 38rem;
+  height: 38rem;
+  opacity: 0.8;
+  visibility: visible;
+}
+
+/*drupal */
+
+.PROJECTImages2 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  grid-auto-flow: dense;
+}
+.items-drupal {
+  width: 42%;
+  height: 50%;
+  position: relative;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Dru-modal {
+  width: 100%;
+  min-height: 38rem;
+  height: 38rem;
+  position: relative;
+}
+.image-drupal {
+  width: 100%;
+  min-height: 38rem;
+  height: 38rem;
+  overflow: hidden;
+}
+.image-drupal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.inner-drup {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #292a39;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+  visibility: hidden;
+}
+.items-drupal:hover .image-drupal img {
+  transform: scale(1.5);
+}
+.items-drupal:hover .inner-drup {
+  width: 100%;
+  min-height: 38rem;
+  height: 38rem;
+  opacity: 0.8;
+  visibility: visible;
+}
+
 /*
 teams
 */
 
-.formargin {
-  margin-top: 0 !important;
+.formargincss {
+  margin-top: -38rem;
+}
+.forwordpress {
+  margin-top: -5rem;
 }
 
 .teams {

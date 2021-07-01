@@ -42,6 +42,7 @@ import { Observable, Observer } from 'rxjs';
   styleUrls: ['./green-codes-home.component.css'],
 })
 export class GreenCodesHomeComponent implements AfterViewInit {
+  digital = '../assets/unnamed.jpg';
   MenuItemss = '../assets/icons/menu.png';
   Formodal = Formodal;
   Backtotop = '../assets/icons/Backtotop.png';
@@ -288,7 +289,8 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.magneto = false;
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
-      this.te.classList.add('formargin');
+      this.te.classList.remove('formargincss');
+      this.te.classList.remove('forwordpress');
     }
   }
 
@@ -302,7 +304,8 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
 
-      this.te.classList.remove('formargin');
+      this.te.classList.remove('formargincss');
+      this.te.classList.remove('forwordpress');
     }
   }
   ForBTnAllDR(params: string) {
@@ -314,7 +317,8 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.magneto = false;
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
-      this.te.classList.remove('formargin');
+      this.te.classList.add('formargincss');
+      this.te.classList.remove('forwordpress');
     }
   }
   ForBTnAlleC(params: string) {
@@ -326,7 +330,8 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.magneto = false;
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
-      this.te.classList.remove('formargin');
+      this.te.classList.add('formargincss');
+      this.te.classList.remove('forwordpress');
     }
   }
   ForBTnAllMag(params: string) {
@@ -338,7 +343,8 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.ecomm = false;
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
-      this.te.classList.remove('formargin');
+      this.te.classList.add('formargin');
+      this.te.classList.remove('forwordpress');
     }
   }
   ForBTnAllword(params: string) {
@@ -350,7 +356,8 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.magneto = false;
       this.showpicture.ecomm = false;
       this.showpicture.Condition = false;
-      this.te.classList.remove('formargin');
+      this.te.classList.remove('formargincss');
+      this.te.classList.add('forwordpress');
     }
   }
 

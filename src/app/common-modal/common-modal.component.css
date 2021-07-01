@@ -38,11 +38,11 @@ body.jw-modal-open {
 }
 .closemodal {
   height: 2rem;
-
+  z-index: 4;
   width: 2rem;
   position: relative;
-  top: 0;
-  left: 0;
+  top: 2em;
+  left: 2em;
   cursor: pointer;
 }
 
@@ -148,7 +148,7 @@ slider
 }
 
 /* images*/
-.teamss{
+.teamss {
   background: #fff;
 }
 .slides-team1 {
