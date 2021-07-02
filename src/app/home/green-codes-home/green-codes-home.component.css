@@ -1,8 +1,9 @@
 /*
 Header
 */
-
-
+.forcontainerheight {
+  margin-bottom: 3em;
+}
 .container {
   width: 100%;
   max-width: 100%;
@@ -80,6 +81,8 @@ Header
 }
 #toph1 {
   color: black;
+  display: block;
+  
 }
 .list {
   display: flex;
@@ -149,20 +152,19 @@ About
   background-color: #f6f6f8;
 }
 .About {
-  height: 45rem;
   position: relative;
   width: 100%;
   max-width: 2073px;
   background-color: #f6f6f8;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .AboutInner {
   position: absolute;
 
   width: 40%;
   max-width: 40%;
-  left: 5%;
-  top: 5em;
+  left: 4em;
 }
 #AboutH2 {
   display: block;
@@ -181,18 +183,17 @@ About
 }
 
 .sliderforimages {
-  position: absolute;
+  float: right;
+  margin-right: 4em;
   background: #f6f6f8;
   width: 35%;
-
-  top: 5em;
-  right: 5em;
 
   border-radius: 10px;
 
   box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.1);
 
   transition: transform 0.5s;
+  margin-bottom: 4em;
 }
 .sliderforimages:hover {
   transform: translateY(-10px);
@@ -228,9 +229,12 @@ About
 /*
 services
 */
+.service-contain {
+  margin-bottom: 3em;
+}
 .services {
   width: 100%;
-  height: 28rem;
+
   background: #e3e3e3;
   position: relative;
   margin-bottom: 5em;
@@ -256,10 +260,10 @@ services
   display: flex;
 
   background: #e3e3e3;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  position: absolute;
-  top: 5.5rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 2.5em;
+  margin-bottom: 4em;
 }
 
 .cart {
@@ -285,6 +289,9 @@ services
 /*
 projects
 */
+.margin-container {
+  padding-bottom: 4em;
+}
 .Pictures {
   object-fit: fill;
 }
@@ -305,7 +312,6 @@ projects
 }
 
 .projects {
-  height: 100rem;
   max-width: 2073px;
   margin-left: auto;
   margin-right: auto;
@@ -754,12 +760,17 @@ projects
 /*
 teams
 */
+/*
 
 .formargincss {
   margin-top: -38rem;
 }
 .forwordpress {
   margin-top: -5rem;
+}
+*/
+.containermargin {
+  margin-bottom: 3em;
 }
 
 .teams {
@@ -850,12 +861,14 @@ teams
 contact Form
 
 */
-
+.contact-padding {
+  padding-bottom: 4em;
+}
 .ContactForm {
   max-width: 2073px;
   margin-left: auto;
   margin-right: auto;
-  height: 40rem;
+
   background-color: #f6f6f8;
   position: relative;
 }
@@ -907,7 +920,7 @@ form .wrapper-div {
   display: inline-block;
   position: relative;
 
-  left: 10rem;
+  left: 10em;
   top: 3rem;
   height: 28rem;
   width: 35%;
@@ -967,7 +980,7 @@ Footer
   padding: 6rem 0;
   color: black;
   display: inline-block;
-  margin-left: 24rem;
+  margin-left: 10rem;
 }
 .fab {
   height: 3rem;

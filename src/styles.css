@@ -65,14 +65,21 @@ span {
   border-radius: 50%;
 }
 
-@media (min-width: 642px) and (max-width: 850px) {
+@media (min-width: 669px) and (max-width: 850px) {
   /*
   About
   */
-  .container-max {
-    height: 75rem;
-  }
 
+  .top-paragraph {
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+  }
+  #toph1 {
+    font-size: 3.5em !important;
+  }
+  #HomeId {
+    top: 5rem !important;
+  }
   .About {
     min-width: 100% !important;
   }
@@ -151,12 +158,10 @@ span {
   }
 
   .sliderforimages {
-    min-width: 80% !important;
+    width: 80% !important;
 
-    max-width: 100% !important;
-    top: 80% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-right: 5em !important;
+    margin-top: 32em !important;
   }
   .imgslide {
     display: block !important;
@@ -178,7 +183,6 @@ span {
   .services {
     min-width: 100% !important;
     width: 100% !important;
-    height: 100rem !important;
   }
   .cart {
     min-width: 20rem !important;
@@ -219,16 +223,22 @@ span {
   }
 
   /* contact */
+  .contactbutton {
+    width: 10em !important;
+  }
+  .FellFreeToContact {
+    left: 4em !important;
+  }
   .input-form {
     margin-bottom: 15px !important;
     width: 100% !important;
   }
-  .ContactForm {
-    height: 80rem !important;
-  }
+
   form .wrapper-div {
-    top: 45% !important;
+    position: relative !important;
+    top: -5em !important;
     left: 0 !important;
+
     width: 100% !important;
   }
   .innerContact {
@@ -236,6 +246,7 @@ span {
 
     /*Footer */
   }
+
   .container-maxx {
     overflow-x: hidden;
   }
@@ -269,9 +280,7 @@ span {
   .width-5 {
     grid-row: span 2 !important;
   }
-  .container-max {
-    height: 100rem !important;
-  }
+
   /*wordpres*/
   .PROJECTImages5 {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -294,7 +303,31 @@ span {
   .container {
     width: 100% !important;
   }
+  /* home */
+  .top-paragraph {
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+  }
+  #toph1 {
+    font-size: 4.3em !important;
+  }
+  #HomeId {
+    top: 6rem !important;
+  }
+  /*contact */
 
+  .wrapper-div .input-form input {
+    min-width: 8em !important;
+  }
+  .wrapper-div .input-textarea textarea {
+    width: 18em !important;
+  }
+  .contactbutton {
+    width: 10em !important;
+  }
+  .FellFreeToContact {
+    left: 4em !important;
+  }
   /*
 projects
 
@@ -332,7 +365,6 @@ projects
   /*head
  */
   .About {
-    height: 68rem !important;
     min-width: 100% !important;
   }
 
@@ -411,8 +443,10 @@ projects
     margin: auto !important;
   }
   .sliderforimages {
-    top: 45% !important;
-    left: 5% !important;
+    margin-top: 32em !important;
+    float: left !important;
+    margin-left: 4em !important;
+    min-width: 40em !important;
   }
 
   /*
@@ -452,32 +486,48 @@ projects
   /*services */
 
   .services2 {
-    margin-right: 3em !important;
-    margin-left: 3em !important;
+    margin-right: 4em !important;
+    margin-left: 4em !important;
   }
   .services {
     min-width: 100% !important;
-    height: 60vh !important;
   }
   .cart {
     min-width: 10rem !important;
   }
 }
-@media (min-width: 465px) and (max-width: 642px) {
+@media (min-width: 465px) and (max-width: 669px) {
+  /*home */
+
+  /*
+contact
+
+  */
+
+  form .wrapper-div {
+    position: relative !important;
+
+    left: 0 !important;
+
+    width: 100% !important;
+  }
+
   /*
   About
   */
+  .AboutInner {
+    left: 2em !important;
+  }
+
+  .top-paragraph {
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+  }
   #toph1 {
-    font-size: 4rem !important;
+    font-size: 3.2rem !important;
   }
   #HomeId {
-    display: none !important;
-  }
-  .forcontainerheight {
-    height: 45rem !important;
-  }
-  .container-max {
-    height: 85rem;
+    top: 3.5em !important;
   }
 
   .About {
@@ -556,7 +606,7 @@ projects
     min-width: 90% !important;
     margin: auto !important;
   }
-
+  /*
   .sliderforimages {
     min-width: 80% !important;
 
@@ -565,6 +615,14 @@ projects
     margin-left: auto !important;
     margin-right: auto !important;
   }
+*/
+
+  .sliderforimages {
+    width: 80% !important;
+    margin-right: 3.5em !important;
+    margin-top: 42em !important;
+  }
+
   .imgslide {
     display: block !important;
     margin: auto !important;
@@ -585,7 +643,6 @@ projects
   .services {
     min-width: 100% !important;
     width: 100% !important;
-    height: 200vh !important;
   }
   .cart {
     width: 100% !important;
@@ -630,32 +687,29 @@ projects
     margin-bottom: 15px !important;
     width: 100% !important;
   }
-  .ContactForm {
-    height: 80rem !important;
-  }
+
   form .wrapper-div {
     top: 45% !important;
     left: 0 !important;
     width: 100% !important;
   }
+
   .innerContact {
     position: relative !important;
     top: 10em !important;
-
-    /*Footer */
   }
+  /*Footer */
   .Footer {
     margin-bottom: 1em !important;
   }
 
   .container-maxx {
     overflow-x: hidden;
-    height: 15rem !important;
   }
   .Icons {
     width: 34% !important;
-    left: 5% !important;
-    top: 1% !important;
+    left: 1em !important;
+    top: -2em !important;
   }
   .IconsForFooter {
     margin-left: 2em !important;
@@ -664,25 +718,23 @@ projects
     width: 100% !important;
     display: block !important;
     min-width: 100% !important;
-    overflow-x: hidden;
+    overflow: hidden;
     margin-left: 1rem !important;
   }
 }
-@media (max-width: 465px) {
+@media (min-width: 369px) and (max-width: 465px) {
   /*
   About
   */
   #toph1 {
-    font-size: 3.5rem !important;
+    font-size: 3rem !important;
   }
   #HomeId {
-    display: none !important;
+    top: 3.2em !important;
   }
-  .forcontainerheight {
-    height: 45rem !important;
-  }
-  .container-max {
-    height: 103rem !important;
+  .top-paragraph {
+    padding-left: 2em !important;
+    padding-right: 2em !important;
   }
 
   .About {
@@ -759,16 +811,13 @@ projects
   }
   .AboutInner {
     min-width: 90% !important;
-    margin: auto !important;
+    left: 1em !important;
   }
 
   .sliderforimages {
-    min-width: 80% !important;
-
-    max-width: 100% !important;
-    top: 143% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    width: 80% !important;
+    margin-right: 3.5em !important;
+    margin-top: 52em !important;
   }
   .imgslide {
     display: block !important;
@@ -790,7 +839,6 @@ projects
   .services {
     min-width: 100% !important;
     width: 100% !important;
-    height: 200vh !important;
   }
   .cart {
     width: 100% !important;
@@ -837,12 +885,12 @@ projects
     margin-bottom: 15px !important;
     width: 100% !important;
   }
-  .ContactForm {
-    height: 80rem !important;
-  }
+
   form .wrapper-div {
-    top: 45% !important;
+    position: relative !important;
+
     left: 0 !important;
+
     width: 100% !important;
   }
   .innerContact {
@@ -871,7 +919,217 @@ projects
     width: 100% !important;
     display: block !important;
     min-width: 100% !important;
-    overflow-x: hidden;
+    overflow: hidden;
     margin-left: 1rem !important;
+  }
+}
+
+@media (max-width: 368px) {
+  /*
+  About
+  */
+  #toph1 {
+    display: block !important;
+
+    font-size: 3em !important;
+    width: 100% !important;
+  }
+  #HomeId {
+    top: 3em !important;
+  }
+  .top-paragraph {
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+  }
+
+  .About {
+    min-width: 100% !important;
+  }
+
+  .menu-itemss {
+    visibility: visible !important;
+  }
+
+  .navbar {
+    margin: 0 !important;
+  }
+  .fixed-nav {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .list {
+    flex-direction: column !important;
+    z-index: 1;
+    position: fixed !important;
+    width: 100% !important;
+
+    height: 100vh !important;
+    background: #e3e3e3 !important;
+    top: 30px !important;
+    left: -100% !important;
+    text-align: center !important;
+    transition: all 0.5s !important;
+  }
+  .Navlist {
+    position: relative;
+    line-height: 30px;
+    bottom: 25%;
+    margin: 30px 0 !important;
+  }
+  .Navlist a {
+    font-size: 25px !important;
+  }
+  #check:checked ~ .list {
+    left: 0 !important;
+  }
+  #check:checked ~ label .menu-itemss {
+    display: none !important;
+  }
+  #check:checked ~ label .closemodal-hide {
+    display: block !important;
+  }
+
+  .drop {
+    position: relative !important;
+    bottom: 25% !important;
+  }
+  .hoverAbout {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 25px !important;
+  }
+
+  .small-about-md {
+    margin-top: 2em !important;
+  }
+  #AboutId {
+    margin: auto !important;
+    width: 9.5rem !important;
+  }
+  #AboutH2 {
+    margin: auto !important;
+    text-align: center;
+  }
+  #AboutP {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .AboutInner {
+    min-width: 90% !important;
+    left: 1em !important;
+  }
+
+  .sliderforimages {
+    width: 80% !important;
+    margin-right: 3.5em !important;
+    margin-top: 66em !important;
+  }
+  .imgslide {
+    display: block !important;
+    margin: auto !important;
+
+    width: 100% !important;
+    object-fit: cover;
+  }
+
+  .innerslide {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  /* services*/
+  .services2 {
+    flex-direction: column !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .services {
+    min-width: 100% !important;
+    width: 100% !important;
+  }
+  .cart {
+    flex-basis: 100% !important;
+    width: 100% !important;
+  }
+  .cart:not(:last-child) {
+    margin-bottom: 1em;
+  }
+  /*
+
+  .services2 {
+    margin-right: 3em !important;
+    margin-left: 3em !important;
+  }
+  .services {
+    min-width: 100% !important;
+    height: 45rem !important;
+  }
+  .cart {
+    min-width: 10rem !important;
+  }
+  */
+
+  /*
+  projectsinner
+  */
+  .projectsinner div {
+    flex-basis: 5% !important;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+  .btn {
+    width: 8rem !important;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  /* contact */
+  .FellFreeToContact {
+    left: 0.2em !important;
+  }
+  .input-form {
+    margin-bottom: 15px !important;
+    width: 100% !important;
+  }
+
+  form .wrapper-div {
+    position: relative !important;
+
+    left: 0 !important;
+
+    width: 100% !important;
+  }
+  .innerContact {
+    position: relative !important;
+    top: 10em !important;
+
+    /*Footer */
+  }
+  .Footer {
+    margin-bottom: 1em !important;
+  }
+
+  .container-maxx {
+    overflow-x: hidden;
+    height: 15rem !important;
+  }
+  .Icons {
+    width: 34% !important;
+    left: 5% !important;
+    top: 1% !important;
+  }
+  .IconsForFooter {
+    margin-left: 0.4em !important;
+  }
+  .FooterInner {
+    width: 100% !important;
+    display: block !important;
+    min-width: 100% !important;
+    overflow: hidden !important;
+    margin-left: 1rem !important;
+  }
+  /*teams */
+  #TeamsId {
+    top: 3em !important;
   }
 }

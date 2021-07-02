@@ -1,4 +1,4 @@
-<div class="container forcontainerheight">
+<div class="container  forcontainerheight">
   <div class="HomeList" id="HomeList">
 
     <nav #navbar class="navbar">
@@ -757,7 +757,7 @@
 
 <!--About-->
 
-<div class="container container-max">
+<div class="container container-max overflow-container">
   <div id="about" class="About">
     <div class="AboutInner" *ngFor="let courses of courses">
       <div [ngClass]="'ArrowH'" id="AboutId"></div>
@@ -816,7 +816,7 @@
 </div>
 
 <!--services-->
-<div class="container">
+<div class="container service-contain">
   <div id="services" class="services">
     <div class="ourservices">
       Our Services
@@ -849,7 +849,7 @@
 </div>
 
 <!--projects-->
-<div class="container container-max">
+<div class="container container-max margin-container">
   <div id="projects" class="projects" *ngFor="let projects of projects">
     <div class="titleprojects">
       <div [ngClass]="'ArrowH'" id="ProjectsId"></div>
@@ -1437,7 +1437,7 @@
 <!--teams-->
 
 <!--Forms Contact-->
-<div class="container container-max">
+<div class="container container-max contact-padding">
   <div id="contactus" [ngClass]="ContactForm">
 
     <div [ngClass]="'FellFreeToContact'" *ngFor="let info of InfoForm ">
@@ -1481,7 +1481,7 @@
           </div>
 
           <div class="btns-textarea">
-            <button [ngClass]="Submit1" type="submit" [disabled]="!CredentialsofGreenforms.valid">Submit</button>
+            <button class="contactbutton" [ngClass]="Submit1" type="submit" [disabled]="!CredentialsofGreenforms.valid">Submit</button>
           </div>
 
         </div>
