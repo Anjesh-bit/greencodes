@@ -34,14 +34,10 @@
 .next {
   position: relative;
   top: 50%;
-  left:1rem;
-
+  left: 1rem;
 }
 .prev {
   position: relative;
- left:96%;
- top:50%;
-
-
-
+  left: 96%;
+  top: 50%;
 }

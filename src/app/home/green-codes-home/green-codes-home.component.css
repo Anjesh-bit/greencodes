@@ -1,8 +1,22 @@
 /*
 Header
 */
+.forheader {
+  width: 2.7em;
+  position: absolute;
+  top: 1em;
+  left: 4em;
+  border-radius: 50%;
+  background: #f6f6f8;
+  transition: transform 0.3s ease-in;
+}
+
+
 .forcontainerheight {
   margin-bottom: 3em;
+}
+.small-md {
+  font-size: 15px;
 }
 .container {
   width: 100%;
@@ -14,28 +28,26 @@ Header
   height: auto;
   background: #e3e3e3;
 
-  max-width: 2073px;
+  max-width: 1515px;
   margin: auto;
 }
 .menu-itemss {
-  width: 2rem;
+  width: 1.6rem;
   position: relative;
-
-  left: 3%;
+  top: 3%;
+  left: 95%;
   cursor: pointer;
   visibility: hidden;
 }
-.closemodal-hide {
-  position: fixed;
 
-  left: 5%;
-  display: none;
+.styles-list {
+  left: -100% !important;
 }
 #check {
   display: none;
 }
 .hoverAbout {
-  font-weight: 600;
+  font-weight: 300;
   cursor: pointer;
   list-style-type: none;
   margin-left: 30px;
@@ -76,15 +88,16 @@ Header
 }
 
 .navbar {
-  margin-right: 18em;
+  margin-right: 7em;
   height: 5rem;
 }
 #toph1 {
   color: black;
+  font-size: 4.8em;
   display: block;
-  
 }
 .list {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   flex-wrap: no-wrap;
@@ -99,7 +112,7 @@ Header
 .list li a {
   color: black;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 300;
 }
 .list li a:hover {
   color: #c60021;
@@ -107,8 +120,11 @@ Header
 .top-paragraph {
   text-align: center;
   margin-top: 10.3rem;
-  height: 25rem;
+
   color: white;
+}
+.small-md {
+  margin-bottom: 5em;
 }
 .top-paragraph h1 {
   font-size: 5.2rem;
@@ -154,7 +170,7 @@ About
 .About {
   position: relative;
   width: 100%;
-  max-width: 2073px;
+  max-width: 1515px;
   background-color: #f6f6f8;
   margin-left: auto;
   margin-right: auto;
@@ -238,7 +254,7 @@ services
   background: #e3e3e3;
   position: relative;
   margin-bottom: 5em;
-  max-width: 2073px;
+  max-width: 1515px;
   margin: auto;
 }
 .ourservices {
@@ -312,7 +328,7 @@ projects
 }
 
 .projects {
-  max-width: 2073px;
+  max-width: 1515px;
   margin-left: auto;
   margin-right: auto;
 
@@ -414,6 +430,7 @@ projects
 }
 .inner-allheader1 {
   text-align: center;
+  cursor: pointer;
   font-size: 1.2rem;
 }
 .width-1 {
@@ -469,8 +486,8 @@ projects
 
 .image-word {
   width: 100%;
-  height: 75rem;
-  min-height: 75rem;
+  height: 45rem;
+  min-height: 45rem;
   overflow: hidden;
 }
 .image-word img {
@@ -501,10 +518,13 @@ projects
 
 .items-word:hover .inner-word1 {
   width: 100%;
-  height: 75rem;
-  min-height: 75rem;
+  height: 45rem;
+  min-height: 45rem;
   opacity: 0.8;
   visibility: visible;
+}
+.inner-allheader1 {
+  cursor: pointer;
 }
 
 /*ci */
@@ -531,8 +551,8 @@ projects
 }
 .image-ci {
   width: 100%;
-  min-height: 75rem;
-  height: 75rem;
+  min-height: 45rem;
+  height: 45rem;
   overflow: hidden;
 }
 .image-ci img {
@@ -561,14 +581,16 @@ projects
   transition: visibility 0s, opacity 0.5s linear;
 }
 .items-ci:hover .inner-word-ci1 {
-  min-height: 75rem;
-  height: 75rem;
+  min-height: 45rem;
+  height: 45rem;
 
   width: 100%;
   opacity: 0.8;
   visibility: visible;
 }
-
+.inner-allheader1 {
+  cursor: pointer;
+}
 /*magneto */
 
 .PROJECTImages4 {
@@ -774,12 +796,10 @@ teams
 }
 
 .teams {
-  height: 50rem;
   background-color: #e3e3e3;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 2073px;
+
+  max-width: 380.563rem;
 }
 .teamsheader {
   padding-top: 5rem;
@@ -798,6 +818,7 @@ teams
 }
 .slides-team {
   position: relative;
+  margin-bottom: 3em;
 }
 
 .imageteam {
@@ -865,10 +886,10 @@ contact Form
   padding-bottom: 4em;
 }
 .ContactForm {
-  max-width: 2073px;
+  max-width: 1515px;
   margin-left: auto;
   margin-right: auto;
-
+  margin-bottom: 5em;
   background-color: #f6f6f8;
   position: relative;
 }
@@ -922,11 +943,12 @@ form .wrapper-div {
 
   left: 10em;
   top: 3rem;
-  height: 28rem;
+
   width: 35%;
 }
 .btns-textarea {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .HeaderContact {
   display: block;
@@ -966,7 +988,7 @@ Footer
 }
 .Footer {
   height: 12rem;
-  max-width: 2073px;
+  max-width: 1515px;
 
   margin: auto;
   background-color: #ccc;

@@ -2,12 +2,12 @@
   <div class="HomeList" id="HomeList">
 
     <nav #navbar class="navbar">
-      <input type="checkbox" id="check">
-      <label for="check">
-        <img [src]="MenuItemss" (click)="showImage('menu')" class="menu-itemss">
-        <img class="closemodal closemodal-hide" [src]="CloseModel" (click)="closed('close')">
 
-      </label>
+      <img [src]="forheader" class="forheader">
+      <img [src]="MenuItemss" (click)="showmodal('modal')" class="menu-itemss">
+
+
+
       <ul #list *ngFor="let arrays of courses" class="list">
 
         <li class="Navlist"><a href="#HomeList" class="menu-items" (click)="home($event)">{{arrays.home}}</a></li>
@@ -626,6 +626,7 @@
           <app-common-modal id="services">
             <img class="closemodal" [src]="CloseModel" (click)="closeModal('services')">
             <div class="container">
+
               <div id="services" class="services">
                 <div class="ourservices">
                   Our Services
@@ -681,6 +682,9 @@
               </div>
 
               <div class="slides-slides">
+                <div class="header">
+                  {{FilterByAll}}: ({{currentIndex+1}}/{{FilterAllLength}})
+                </div>
                 <div class="sliderimages" *ngFor="let images of  ImagesSlider|forImageCarousal:FilterByAll;let i=index">
 
                   <ng-container *ngIf="i===currentIndex">
@@ -713,8 +717,9 @@
               </div>
 
 
-
+              <img class="closemodalforproject" [src]="CloseModel" (click)="closeModal('allofthecontent')">
             </div>
+
 
 
           </app-common-modal>
@@ -742,7 +747,7 @@
 
       </div>
       <div>
-        <button class="small-md">GET IN TOUCH
+        <button class="small-md" href="#contactus" (click)="contactus($event)">Get in touch
 
         </button>
       </div>
@@ -849,7 +854,12 @@
 </div>
 
 <!--projects-->
+
+
+
 <div class="container container-max margin-container">
+
+
   <div id="projects" class="projects" *ngFor="let projects of projects">
     <div class="titleprojects">
       <div [ngClass]="'ArrowH'" id="ProjectsId"></div>
@@ -976,7 +986,7 @@
             <div class="inner-word-ci1">
               <img (click)="MonsterWebPlanner1('MonsterWebplanner','allofthecontent')" class="Common-image"
                 [src]="Expand">
-              <h2 (click)="MonsterWebPlanner('MonsterWebplanner')" class="inner-allheader1">Bradmorebuilders</h2>
+              <h2 (click)="MonsterWebPlanner('MonsterWebplanner')" class="inner-allheader1">MonsterWebplanner</h2>
             </div>
           </div>
 
@@ -990,7 +1000,7 @@
 
             <div class="inner-word-ci1">
               <img (click)="Travelmoon1('traveltothemoon','allofthecontent')" class="Common-image" [src]="Expand">
-              <h2 (click)="Travelmoon('traveltothemoon')" class="inner-allheader1">Bradmorebuilders</h2>
+              <h2 (click)="Travelmoon('traveltothemoon')" class="inner-allheader1">Traveltothemoon</h2>
             </div>
           </div>
 
@@ -1016,7 +1026,7 @@
 
             <div class="inner-drup">
               <img (click)="CanyoLake1('canyonLake','allofthecontent')" class="Common-image" [src]="Expand">
-              <h2 (click)="CanyoLake('canyonLake')" class="inner-allheader1">Bradmorebuilders</h2>
+              <h2 (click)="CanyoLake('canyonLake')" class="inner-allheader1">canyonLake</h2>
             </div>
           </div>
 
@@ -1040,7 +1050,7 @@
 
             <div class="inner-eccc">
               <img (click)="Comalfloweshop1('comalflower','allofthecontent')" class="Common-image" [src]="Expand">
-              <h2 (click)="Comalfloweshop('comalflower')" class="inner-allheader1">Bradmorebuilders</h2>
+              <h2 (click)="Comalfloweshop('comalflower')" class="inner-allheader1">comalflower</h2>
             </div>
           </div>
 
@@ -1066,7 +1076,7 @@
 
             <div class="inner-word-magento">
               <img (click)="Comalfloweshop1('comalflower','allofthecontent')" class="Common-image" [src]="Expand">
-              <h2 (click)="Comalfloweshop('comalflower')" class="inner-allheader1">Bradmorebuilders</h2>
+              <h2 (click)="Comalfloweshop('comalflower')" class="inner-allheader1">comalflower</h2>
             </div>
           </div>
 
@@ -1481,7 +1491,8 @@
           </div>
 
           <div class="btns-textarea">
-            <button class="contactbutton" [ngClass]="Submit1" type="submit" [disabled]="!CredentialsofGreenforms.valid">Submit</button>
+            <button class="contactbutton" [ngClass]="Submit1" type="submit"
+              [disabled]="!CredentialsofGreenforms.valid">Submit</button>
           </div>
 
         </div>
@@ -1497,7 +1508,7 @@
 <div class="container container-maxx">
   <div [ngClass]="Footer">
     <div [ngClass]="InnerFooter">
-      <p [ngClass]="'DATE'">Copyright @{{ time| async}} Greencodes Nepal. All rights reserved.</p>
+      <p [ngClass]="'DATE'">Copyright @{{ time| async}} Greencodes Nepal.</p>
 
     </div>
     <div [ngClass]="'Icons'" *ngFor="let icons of Icons">

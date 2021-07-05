@@ -31,7 +31,7 @@ span {
   position: fixed;
   top: 0;
   right: 0;
-  min-width: 38.5%;
+  min-width: 55%;
 
   z-index: 999999999999;
   background: #e3e3e3;
@@ -68,8 +68,14 @@ span {
 @media (min-width: 669px) and (max-width: 850px) {
   /*
   About
+
+
   */
 
+  /*slider for the projects */
+  .slides-slides {
+    width: 90% !important;
+  }
   .top-paragraph {
     padding-left: 4em !important;
     padding-right: 4em !important;
@@ -108,6 +114,9 @@ span {
     text-align: center !important;
     transition: all 0.5s !important;
   }
+  .toogleclass {
+    left: 0 !important;
+  }
   .Navlist {
     position: relative;
     line-height: 30px;
@@ -117,23 +126,28 @@ span {
   .Navlist a {
     font-size: 25px !important;
   }
-  #check:checked ~ .list {
-    left: 0 !important;
-  }
-  #check:checked ~ label .menu-itemss {
-    display: none !important;
-  }
-  #check:checked ~ label .closemodal-hide {
-    display: block !important;
-  }
 
   .drop {
     position: relative !important;
+    height: 12rem !important ;
     bottom: 25% !important;
+
+    order: 10 !important ;
+  }
+  .hovarableContent {
+    background-color: crimson !important;
+    opacity: 0.85 !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 5rem !important;
+  }
+  .hoverli {
+    font-size: 1.5em !important;
   }
   .hoverAbout {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
     font-size: 25px !important;
   }
 
@@ -153,15 +167,16 @@ span {
     margin-right: auto !important;
   }
   .AboutInner {
+    position: relative !important;
     min-width: 90% !important;
-    margin: auto !important;
+    left: 3em !important;
   }
 
   .sliderforimages {
     width: 80% !important;
 
     margin-right: 5em !important;
-    margin-top: 32em !important;
+    margin-top: 3em !important;
   }
   .imgslide {
     display: block !important;
@@ -186,7 +201,7 @@ span {
   }
   .cart {
     min-width: 20rem !important;
-    width: 100% !important;
+    width: 80% !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -211,15 +226,15 @@ span {
   /*
   projectsinner
   */
-  .projectsinner div {
-    flex-basis: 5% !important;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+  .projectsinner {
+    margin-left: 1.3em !important;
+    justify-content: unset !important;
+    overflow: scroll !important;
+    width: 100% !important;
   }
   .btn {
-    width: 8rem !important;
-    margin-left: 2em;
-    margin-right: 2em;
+    width: 7.7rem !important;
+    margin-left: 2em !important;
   }
 
   /* contact */
@@ -280,18 +295,46 @@ span {
   .width-5 {
     grid-row: span 2 !important;
   }
+  /*all */
 
+  .grid {
+    margin-left: 3em !important;
+    margin-right: 3em !important;
+  }
+  /*word */
+  .gridwo {
+    margin-left: 3em !important;
+    margin-right: 3em !important;
+  }
+
+  /*ci */
+
+  .gridci {
+    margin-left: 3em !important;
+    margin-right: 3em !important;
+  }
+  .image-ci {
+    height: 33rem !important;
+    min-height: 33rem !important;
+  }
+  .items-ci:hover .inner-word-ci1 {
+    min-height: 33rem !important;
+    height: 33rem !important;
+  }
   /*wordpres*/
   .PROJECTImages5 {
     grid-template-columns: repeat(2, 1fr) !important;
   }
   .image-word {
     height: 30rem !important;
-    min-height: 36rem !important;
+    min-height: 30rem !important;
+  }
+
+  .items-word:hover .inner-word1 {
+    height: 30rem !important;
+    min-height: 30rem !important;
   }
 }
-
-/* mobiles (landscape and portrait) */
 
 @media (min-width: 1200px) {
   .list {
@@ -300,6 +343,11 @@ span {
 }
 
 @media (min-width: 849px) and (max-width: 1200px) {
+  /* sliders for the project modals*/
+
+  .slides-slides {
+    width: 65% !important;
+  }
   .container {
     width: 100% !important;
   }
@@ -320,7 +368,7 @@ span {
     min-width: 8em !important;
   }
   .wrapper-div .input-textarea textarea {
-    width: 18em !important;
+    min-width: 18em !important;
   }
   .contactbutton {
     width: 10em !important;
@@ -361,6 +409,33 @@ projects
     height: 38rem !important;
     min-height: 38rem !important;
   }
+  .items-word:hover .inner-word1 {
+    height: 38rem !important;
+    min-height: 38rem !important;
+  }
+  /* CI */
+
+  .image-ci {
+    height: 40rem !important;
+    min-height: 40rem !important;
+  }
+  .items-ci:hover .inner-word-ci1 {
+    min-height: 40rem !important;
+    height: 40rem !important;
+  }
+
+  .gridwo {
+    margin-left: 4em !important;
+    margin-right: 4em !important;
+  }
+  .grid {
+    margin-left: 4em !important;
+    margin-right: 4em !important;
+  }
+  .gridci {
+    margin-left: 4em !important;
+    margin-right: 4em !important;
+  }
 
   /*head
  */
@@ -392,6 +467,9 @@ projects
     text-align: center !important;
     transition: all 0.5s !important;
   }
+  .toogleclass {
+    left: 0 !important;
+  }
   .Navlist {
     position: relative;
     line-height: 30px;
@@ -401,23 +479,28 @@ projects
   .Navlist a {
     font-size: 25px !important;
   }
-  #check:checked ~ .list {
-    left: 0 !important;
-  }
-  #check:checked ~ label .menu-itemss {
-    display: none !important;
-  }
-  #check:checked ~ label .closemodal-hide {
-    display: block !important;
-  }
 
   .drop {
     position: relative !important;
+    height: 12rem !important ;
     bottom: 25% !important;
+
+    order: 10 !important ;
+  }
+  .hovarableContent {
+    background-color: crimson !important;
+    opacity: 0.85 !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 5rem !important;
+  }
+  .hoverli {
+    font-size: 1.5em !important;
   }
   .hoverAbout {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
     font-size: 25px !important;
   }
 
@@ -438,12 +521,13 @@ projects
     margin-right: auto !important;
   }
   .AboutInner {
+    position: relative !important;
     min-width: 90% !important;
 
-    margin: auto !important;
+    left: 4em !important;
   }
   .sliderforimages {
-    margin-top: 32em !important;
+    margin-top: 3em !important;
     float: left !important;
     margin-left: 4em !important;
     min-width: 40em !important;
@@ -496,27 +580,51 @@ projects
     min-width: 10rem !important;
   }
 }
-@media (min-width: 465px) and (max-width: 669px) {
-  /*home */
+@media (min-width: 668px) and (max-width: 700px) {
+  .teamdiv {
+    width: 70% !important;
+  }
+}
+@media (min-width: 470px) and (max-width: 668px) {
+  /* projects slider */
+  .slides-slides {
+    width: 95% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .wrapper-division {
+    width: 100% !important;
+    padding: 3em 1em !important;
+    text-align: unset !important;
+  }
+  .wrapper-h2 {
+    font-size: 2rem !important;
+  }
+  .divforline {
+    top: 3rem !important;
+  }
+  /*teams */
+  .teamdiv {
+    width: 80% !important;
+  }
+  .closemodal {
+    width: 1.1em !important;
+
+    left: 0.1em !important;
+    top: 0.1em !important;
+    cursor: none !important;
+  }
 
   /*
 contact
 
   */
 
-  form .wrapper-div {
-    position: relative !important;
-
-    left: 0 !important;
-
-    width: 100% !important;
-  }
-
   /*
   About
   */
   .AboutInner {
-    left: 2em !important;
+    left: 1em !important;
   }
 
   .top-paragraph {
@@ -527,7 +635,7 @@ contact
     font-size: 3.2rem !important;
   }
   #HomeId {
-    top: 3.5em !important;
+    top: 4em !important;
   }
 
   .About {
@@ -564,29 +672,40 @@ contact
     bottom: 25%;
     margin: 30px 0 !important;
   }
-  .Navlist a {
-    font-size: 25px !important;
+  .menu-itemss {
+    left: 92.7% !important;
   }
-  #check:checked ~ .list {
+  .toogleclass {
     left: 0 !important;
   }
-  #check:checked ~ label .menu-itemss {
-    display: none !important;
-  }
-  #check:checked ~ label .closemodal-hide {
-    display: block !important;
+  .Navlist a {
+    font-size: 25px !important;
   }
 
   .drop {
     position: relative !important;
+    height: 12rem !important ;
     bottom: 25% !important;
+
+    order: 10 !important ;
+  }
+  .hovarableContent {
+    background-color: crimson !important;
+    opacity: 0.85 !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 5rem !important;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  }
+  .hoverli {
+    font-size: 1.5em !important;
   }
   .hoverAbout {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
     font-size: 25px !important;
   }
-
   .small-about-md {
     margin-top: 2em !important;
   }
@@ -603,6 +722,7 @@ contact
     margin-right: auto !important;
   }
   .AboutInner {
+    position: relative !important;
     min-width: 90% !important;
     margin: auto !important;
   }
@@ -620,7 +740,7 @@ contact
   .sliderforimages {
     width: 80% !important;
     margin-right: 3.5em !important;
-    margin-top: 42em !important;
+    margin-top: 3em !important;
   }
 
   .imgslide {
@@ -645,6 +765,7 @@ contact
     width: 100% !important;
   }
   .cart {
+    min-width: 20rem !important;
     width: 100% !important;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -652,52 +773,145 @@ contact
   .cart:not(:last-child) {
     margin-bottom: 1em;
   }
-  /*
-
-  .services2 {
-    margin-right: 3em !important;
-    margin-left: 3em !important;
-  }
-  .services {
-    min-width: 100% !important;
-    height: 45rem !important;
-  }
-  .cart {
-    min-width: 10rem !important;
-  }
-  */
-
-  /*
-  projectsinner
-  */
-  .projectsinner div {
-    flex-basis: 5% !important;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-  }
-  .btn {
-    width: 8rem !important;
-    margin-left: 2em;
-    margin-right: 2em;
-  }
 
   /* contact */
 
+  .contactbutton {
+    width: 10em !important;
+  }
+  .FellFreeToContact {
+    left: 4em !important;
+  }
   .input-form {
     margin-bottom: 15px !important;
     width: 100% !important;
   }
 
   form .wrapper-div {
-    top: 45% !important;
+    position: relative !important;
+    top: -5em !important;
     left: 0 !important;
+
     width: 100% !important;
   }
-
   .innerContact {
-    position: relative !important;
-    top: 10em !important;
+    margin-top: 10em !important;
+
+    /*Footer */
   }
+  /*PROJECTS */
+  .PROJECTImages {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .width-1 {
+    grid-column: span 1 !important;
+    grid-row: span 2 !important;
+  }
+
+  .width-3 {
+    grid-column: span 1 !important;
+    grid-row: span 2 !important;
+  }
+  .width-4 {
+    grid-row: span 2 !important;
+  }
+  .width-5 {
+    grid-row: span 2 !important;
+  }
+  /*all */
+
+  .grid {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  /* ci*/
+
+  .gridci {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .image-ci {
+    height: 33rem !important;
+    min-height: 33rem !important;
+  }
+  .items-ci:hover .inner-word-ci1 {
+    min-height: 33rem !important;
+    height: 33rem !important;
+  }
+  /* drupal*/
+  .griddr {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .items-drupal {
+    width: 100% !important;
+    height: 50% !important;
+  }
+
+  /*magneto */
+  .items-magento {
+    width: 100% !important;
+    height: 50% !important;
+  }
+  .gridmg {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+
+  /*ecc */
+  .gridec {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .items-ecommerce {
+    width: 100% !important;
+    height: 50% !important;
+  }
+
+  /*wordpres magento ecomerce*/
+
+  .gridwo {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .gridec {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .gridmg {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .PROJECTImages5 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .image-word {
+    height: 30rem !important;
+    min-height: 30rem !important;
+  }
+  .items-word:hover .inner-word1 {
+    height: 30rem !important;
+    min-height: 30rem !important;
+  }
+
+  /*wordpres*/
+
+  .gridwo {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .gridec {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .gridmg {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .PROJECTImages5 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
   /*Footer */
   .Footer {
     margin-bottom: 1em !important;
@@ -721,8 +935,46 @@ contact
     overflow: hidden;
     margin-left: 1rem !important;
   }
+
+  .projectsinner {
+    margin-left: 0em !important;
+    justify-content: unset !important;
+    overflow: scroll !important;
+    width: 100% !important;
+  }
+  .btn {
+    width: 7.7rem !important;
+    margin-left: 1.2em !important;
+  }
 }
-@media (min-width: 369px) and (max-width: 465px) {
+@media (min-width: 369px) and (max-width: 470px) {
+  /*projects */
+  .slides-slides {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .wrapper-division {
+    width: 100% !important;
+    padding: 3em 1em !important;
+    text-align: unset !important;
+  }
+  .wrapper-h2 {
+    font-size: 1.8rem !important;
+  }
+  .divforline {
+    top: 3rem !important;
+  }
+  .jw-modal-body {
+    margin: 20px !important;
+  }
+  .closemodal {
+    width: 1.1em !important;
+
+    left: 0.1em !important;
+    top: 0.1em !important;
+    cursor: none !important;
+  }
   /*
   About
   */
@@ -730,11 +982,16 @@ contact
     font-size: 3rem !important;
   }
   #HomeId {
-    top: 3.2em !important;
+    top: 3.4em !important;
+    width: 9rem !important;
+  }
+  .small-md {
+    width: 10em !important;
   }
   .top-paragraph {
     padding-left: 2em !important;
     padding-right: 2em !important;
+    margin-top: 6rem !important;
   }
 
   .About {
@@ -771,26 +1028,38 @@ contact
     bottom: 25%;
     margin: 30px 0 !important;
   }
-  .Navlist a {
-    font-size: 25px !important;
+  .menu-itemss {
+    left: 91% !important;
   }
-  #check:checked ~ .list {
+  .toogleclass {
     left: 0 !important;
   }
-  #check:checked ~ label .menu-itemss {
-    display: none !important;
-  }
-  #check:checked ~ label .closemodal-hide {
-    display: block !important;
+  .Navlist a {
+    font-size: 25px !important;
   }
 
   .drop {
     position: relative !important;
+    height: 12rem !important ;
     bottom: 25% !important;
+
+    order: 10 !important ;
+  }
+  .hovarableContent {
+    background-color: crimson !important;
+    opacity: 0.85 !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 5rem !important;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  }
+  .hoverli {
+    font-size: 1.5em !important;
   }
   .hoverAbout {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
     font-size: 25px !important;
   }
 
@@ -810,14 +1079,16 @@ contact
     margin-right: auto !important;
   }
   .AboutInner {
+    position: relative !important;
     min-width: 90% !important;
     left: 1em !important;
   }
 
   .sliderforimages {
-    width: 80% !important;
-    margin-right: 3.5em !important;
-    margin-top: 52em !important;
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 3em !important;
   }
   .imgslide {
     display: block !important;
@@ -833,53 +1104,46 @@ contact
   }
 
   /* services*/
+
   .services2 {
     flex-direction: column !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   .services {
     min-width: 100% !important;
     width: 100% !important;
   }
   .cart {
+    flex-basis: 100% !important;
     width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
   }
   .cart:not(:last-child) {
     margin-bottom: 1em;
   }
   /*
 
-  .services2 {
-    margin-right: 3em !important;
-    margin-left: 3em !important;
-  }
-  .services {
-    min-width: 100% !important;
-    height: 45rem !important;
-  }
-  .cart {
-    min-width: 10rem !important;
-  }
-  */
 
-  /*
   projectsinner
   */
-  .projectsinner div {
-    flex-basis: 5% !important;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+  .projectsinner {
+    margin-left: 0.4em !important;
+    justify-content: unset !important;
+    overflow: scroll !important;
+    width: 100% !important;
   }
   .btn {
-    width: 8rem !important;
-    margin-left: 2em;
-    margin-right: 2em;
+    width: 7.7rem !important;
+    margin-left: 1em !important;
   }
 
   /* contact */
+
+  .contactbutton {
+    width: 10em !important;
+  }
   .FellFreeToContact {
-    left: 2em !important;
+    left: 4em !important;
   }
   .input-form {
     margin-bottom: 15px !important;
@@ -888,17 +1152,15 @@ contact
 
   form .wrapper-div {
     position: relative !important;
-
+    top: -5em !important;
     left: 0 !important;
 
     width: 100% !important;
   }
   .innerContact {
-    position: relative !important;
-    top: 10em !important;
-
-    /*Footer */
+    margin-top: 10em !important;
   }
+  /*Footer */
   .Footer {
     margin-bottom: 1em !important;
   }
@@ -922,24 +1184,159 @@ contact
     overflow: hidden;
     margin-left: 1rem !important;
   }
+
+  /*PROJECTS */
+  .PROJECTImages {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .width-1 {
+    grid-column: span 1 !important;
+    grid-row: span 2 !important;
+  }
+
+  .width-3 {
+    grid-column: span 1 !important;
+    grid-row: span 2 !important;
+  }
+  .width-4 {
+    grid-row: span 2 !important;
+  }
+  .width-5 {
+    grid-row: span 2 !important;
+  }
+  /*all */
+
+  .grid {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  /* ci*/
+
+  .gridci {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .PROJECTImages1 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .image-ci {
+    min-height: 25rem !important;
+    height: 25rem !important;
+  }
+  .items-ci:hover .inner-word-ci1 {
+    min-height: 25rem !important;
+    height: 25rem !important;
+  }
+
+  /* drupal*/
+  .griddr {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .items-drupal {
+    width: 100% !important;
+    height: 50% !important;
+  }
+
+  /*magneto */
+  .items-magento {
+    width: 100% !important;
+    height: 50% !important;
+  }
+  .gridmg {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+
+  /*ecc */
+  .gridec {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .items-ecommerce {
+    width: 100% !important;
+    height: 50% !important;
+  }
+
+  /*wordpres*/
+
+  .gridwo {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .gridec {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .gridmg {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .PROJECTImages5 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .image-word {
+    height: 25rem !important;
+    min-height: 25rem !important;
+  }
+  .items-word:hover .inner-word1 {
+    height: 25rem !important;
+    min-height: 25rem !important;
+  }
 }
 
 @media (max-width: 368px) {
+  .closemodal {
+    width: 1.1em !important;
+
+    left: 0.1em !important;
+    top: 0.1em !important;
+    cursor: none !important;
+  }
+  .slides-slides {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .wrapper-division {
+    width: 100% !important;
+    padding: 5em 0.1em !important;
+    text-align: unset !important;
+  }
+
+  .wrapper-h2 {
+    font-size: 1.5rem !important;
+  }
+  .divforline {
+    top: 2rem !important;
+    width: 10em !important;
+  }
+  .jw-modal-body {
+    margin: 15px !important;
+  }
   /*
   About
   */
+  .forcontainerheight {
+    overflow: scroll !important;
+  }
   #toph1 {
     display: block !important;
 
-    font-size: 3em !important;
+    font-size: 2.5em !important;
     width: 100% !important;
   }
   #HomeId {
     top: 3em !important;
+    width: 8rem !important;
+  }
+  .small-md {
+    width: 10em !important;
   }
   .top-paragraph {
     padding-left: 2em !important;
     padding-right: 2em !important;
+    margin-top: 6rem !important;
   }
 
   .About {
@@ -970,6 +1367,12 @@ contact
     text-align: center !important;
     transition: all 0.5s !important;
   }
+  .toogleclass {
+    left: 0 !important;
+  }
+  .menu-itemss {
+    left: 89.2% !important;
+  }
   .Navlist {
     position: relative;
     line-height: 30px;
@@ -979,23 +1382,29 @@ contact
   .Navlist a {
     font-size: 25px !important;
   }
-  #check:checked ~ .list {
-    left: 0 !important;
-  }
-  #check:checked ~ label .menu-itemss {
-    display: none !important;
-  }
-  #check:checked ~ label .closemodal-hide {
-    display: block !important;
-  }
 
   .drop {
     position: relative !important;
+    height: 12rem !important ;
     bottom: 25% !important;
+
+    order: 10 !important ;
+  }
+  .hovarableContent {
+    background-color: crimson !important;
+    opacity: 0.85 !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 5rem !important;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  }
+  .hoverli {
+    font-size: 1.5em !important;
   }
   .hoverAbout {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
     font-size: 25px !important;
   }
 
@@ -1015,14 +1424,17 @@ contact
     margin-right: auto !important;
   }
   .AboutInner {
+    position: relative !important;
     min-width: 90% !important;
+
     left: 1em !important;
   }
 
   .sliderforimages {
-    width: 80% !important;
-    margin-right: 3.5em !important;
-    margin-top: 66em !important;
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 3em !important;
   }
   .imgslide {
     display: block !important;
@@ -1056,36 +1468,28 @@ contact
   }
   /*
 
-  .services2 {
-    margin-right: 3em !important;
-    margin-left: 3em !important;
-  }
-  .services {
-    min-width: 100% !important;
-    height: 45rem !important;
-  }
-  .cart {
-    min-width: 10rem !important;
-  }
-  */
+
 
   /*
   projectsinner
   */
-  .projectsinner div {
-    flex-basis: 5% !important;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+  .projectsinner {
+    margin-left: -0.5em !important;
+    justify-content: unset !important;
+    overflow: scroll !important;
+    width: 100% !important;
   }
   .btn {
-    width: 8rem !important;
-    margin-left: 2em;
-    margin-right: 2em;
+    width: 7.7rem !important;
+    margin-left: 1em !important;
   }
-
   /* contact */
+
+  .contactbutton {
+    width: 10em !important;
+  }
   .FellFreeToContact {
-    left: 0.2em !important;
+    left: 1em !important;
   }
   .input-form {
     margin-bottom: 15px !important;
@@ -1094,17 +1498,16 @@ contact
 
   form .wrapper-div {
     position: relative !important;
-
+    top: -5em !important;
     left: 0 !important;
 
     width: 100% !important;
   }
   .innerContact {
-    position: relative !important;
-    top: 10em !important;
-
-    /*Footer */
+    margin-top: 10em !important;
   }
+
+  /* footer*/
   .Footer {
     margin-bottom: 1em !important;
   }
@@ -1131,5 +1534,156 @@ contact
   /*teams */
   #TeamsId {
     top: 3em !important;
+  }
+
+  /*PROJECTS */
+  .PROJECTImages {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .width-1 {
+    grid-column: span 1 !important;
+    grid-row: span 2 !important;
+  }
+
+  .width-3 {
+    grid-column: span 1 !important;
+    grid-row: span 2 !important;
+  }
+  .width-4 {
+    grid-row: span 2 !important;
+  }
+  .width-5 {
+    grid-row: span 2 !important;
+  }
+  /*all */
+
+  .grid {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  /* ci*/
+
+  .gridci {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .PROJECTImages1 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .image-ci {
+    min-height: 25rem !important;
+    height: 25rem !important;
+  }
+  .items-ci:hover .inner-word-ci1 {
+    min-height: 25rem !important;
+    height: 25rem !important;
+  }
+  /* drupal*/
+  .griddr {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .items-drupal {
+    width: 100% !important;
+    height: 50% !important;
+  }
+
+  /*magneto */
+  .items-magento {
+    width: 100% !important;
+    height: 50% !important;
+  }
+  .gridmg {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+
+  /*ecc */
+  .gridec {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .items-ecommerce {
+    width: 100% !important;
+    height: 50% !important;
+  }
+
+  /*wordpres*/
+
+  .gridwo {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .gridec {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .gridmg {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  .PROJECTImages5 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .image-word {
+    height: 25rem !important;
+    min-height: 25rem !important;
+  }
+  .items-word:hover .inner-word1 {
+    height: 25rem !important;
+    min-height: 25rem !important;
+  }
+}
+@media (max-width: 275px) {
+  .AboutInner {
+    position: relative !important;
+  }
+  .sliderforimages {
+    margin-top: 3em !important;
+  }
+  .top-paragraph {
+    padding-left: 0.3em !important;
+    padding-right: 0.3em !important;
+    margin-top: 5em !important;
+  }
+
+  .small-md {
+    width: 70% !important;
+  }
+  .menu-itemss {
+    left: 85% !important;
+  }
+  .contactbutton {
+    width: 6em !important;
+    margin-left: 0.3em !important;
+    margin-right: 0.3em !important;
+  }
+  #ProjectsId {
+    top: 6rem !important;
+  }
+  #TeamsId {
+    top: 6rem !important;
+  }
+  #FormsId {
+    top: 3rem !important;
+    width: 5rem;
+  }
+}
+@media (min-width: 3300px) {
+  .imageteam {
+    object-fit: cover !important;
+    object-position: 10% 10% !important;
+
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .teamdiv {
+    width: 58rem !important;
+    height: 45rem !important;
+  }
+}
+@media (min-width: 3000px) and (max-width: 3300px) {
+  .imageteam {
+    object-position: 10% 10% !important;
   }
 }

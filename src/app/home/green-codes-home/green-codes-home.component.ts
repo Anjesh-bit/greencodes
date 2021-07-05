@@ -42,6 +42,7 @@ import { Observable, Observer } from 'rxjs';
   styleUrls: ['./green-codes-home.component.css'],
 })
 export class GreenCodesHomeComponent implements AfterViewInit {
+  forheader = '../assets/forheader.png';
   digital = '../assets/unnamed.jpg';
   MenuItemss = '../assets/icons/menu.png';
   Formodal = Formodal;
@@ -206,13 +207,6 @@ export class GreenCodesHomeComponent implements AfterViewInit {
     this.getAllimages();
   }
 
-  showImage(params: any) {
-    if (params == 'menu') {
-      this.List.style.visibility = 'visible';
-    }
-    console.log('hey hey cl');
-  }
-
   @ViewChild('innerslide11') ForSlides!: ElementRef;
   @ViewChild('list') listmodal!: ElementRef;
 
@@ -289,8 +283,8 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.magneto = false;
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
-     // this.te.classList.remove('formargincss');
-     // this.te.classList.remove('forwordpress');
+      // this.te.classList.remove('formargincss');
+      // this.te.classList.remove('forwordpress');
     }
   }
 
@@ -304,8 +298,8 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
 
-     // this.te.classList.remove('formargincss');
-     // this.te.classList.remove('forwordpress');
+      // this.te.classList.remove('formargincss');
+      // this.te.classList.remove('forwordpress');
     }
   }
   ForBTnAllDR(params: string) {
@@ -318,7 +312,7 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
       //this.te.classList.add('formargincss');
-     // this.te.classList.remove('forwordpress');
+      // this.te.classList.remove('forwordpress');
     }
   }
   ForBTnAlleC(params: string) {
@@ -330,8 +324,8 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.magneto = false;
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
-     // this.te.classList.add('formargincss');
-     // this.te.classList.remove('forwordpress');
+      // this.te.classList.add('formargincss');
+      // this.te.classList.remove('forwordpress');
     }
   }
   ForBTnAllMag(params: string) {
@@ -343,8 +337,8 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.ecomm = false;
       this.showpicture.wordpress = false;
       this.showpicture.Condition = false;
-     // this.te.classList.add('formargin');
-     // this.te.classList.remove('forwordpress');
+      // this.te.classList.add('formargin');
+      // this.te.classList.remove('forwordpress');
     }
   }
   ForBTnAllword(params: string) {
@@ -356,8 +350,8 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       this.showpicture.magneto = false;
       this.showpicture.ecomm = false;
       this.showpicture.Condition = false;
-     // this.te.classList.remove('formargincss');
-     // this.te.classList.add('forwordpress');
+      // this.te.classList.remove('formargincss');
+      // this.te.classList.add('forwordpress');
     }
   }
 
@@ -498,7 +492,7 @@ export class GreenCodesHomeComponent implements AfterViewInit {
 
   home(event: any) {
     event.preventDefault();
-    this.List.style.visibility = 'hidden';
+
     this.id = event.currentTarget.getAttribute('href').slice(1);
     this.element = <HTMLInputElement>document.getElementById(this.id);
     this.Homeheight = this.NavList.getBoundingClientRect().height;
@@ -514,11 +508,11 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       top: this.position,
       behavior: 'smooth',
     });
+    this.List.classList.remove('toogleclass');
   }
 
   about(event: any) {
     event.preventDefault();
-    this.List.style.visibility = 'hidden';
 
     this.id = event.currentTarget.getAttribute('href').slice(1);
     this.element = <HTMLInputElement>document.getElementById(this.id);
@@ -535,10 +529,11 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       top: this.position,
       behavior: 'smooth',
     });
+    this.List.classList.remove('toogleclass');
   }
   projectss(event: any) {
     event.preventDefault();
-    this.List.style.visibility = 'hidden';
+
     this.id = event.currentTarget.getAttribute('href').slice(1);
     this.element = <HTMLInputElement>document.getElementById(this.id);
     this.Homeheight = this.NavList.getBoundingClientRect().height;
@@ -554,11 +549,12 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       top: this.position,
       behavior: 'smooth',
     });
+    this.List.classList.remove('toogleclass');
   }
 
   contactus(event: any) {
     event.preventDefault();
-    this.List.style.visibility = 'hidden';
+
     this.id = event.currentTarget.getAttribute('href').slice(1);
     this.element = <HTMLInputElement>document.getElementById(this.id);
     this.Homeheight = this.NavList.getBoundingClientRect().height;
@@ -574,10 +570,11 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       top: this.position,
       behavior: 'smooth',
     });
+    this.List.classList.remove('toogleclass');
   }
   Services(event: any) {
     event.preventDefault();
-    this.List.style.visibility = 'hidden';
+
     this.id = event.currentTarget.getAttribute('href').slice(1);
     this.element = <HTMLInputElement>document.getElementById(this.id);
     this.Homeheight = this.NavList.getBoundingClientRect().height;
@@ -593,6 +590,7 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       top: this.position,
       behavior: 'smooth',
     });
+    this.List.classList.remove('toogleclass');
   }
   //backtotop
   BacktoTop(event: any) {
@@ -610,7 +608,11 @@ export class GreenCodesHomeComponent implements AfterViewInit {
       behavior: 'smooth',
     });
   }
-  closed(params: any) {}
+  showmodal(params: any) {
+    if (params == 'modal') {
+      this.List.classList.toggle('toogleclass');
+    }
+  }
   openModal(id: string) {
     this.CommonModal.open(id);
   }

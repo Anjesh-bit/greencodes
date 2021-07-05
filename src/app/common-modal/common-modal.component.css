@@ -37,12 +37,11 @@ body.jw-modal-open {
   overflow: hidden;
 }
 .closemodal {
-  height: 2rem;
-  z-index: 4;
-  width: 2rem;
+  width: 1.3em !important;
   position: relative;
-  top: 2em;
-  left: 2em;
+  left: 1em;
+  top: 1em;
+  z-index: 4;
   cursor: pointer;
 }
 
@@ -98,18 +97,35 @@ body.jw-modal-open {
 /*
 slider
 */
-
+.header {
+  color: #c60021;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
 .wrapper-division {
+  width: 90%;
+  padding: 3em 3em;
+  text-align: justify;
+}
+.closemodalforproject {
+  width: 1.3em !important;
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  cursor: pointer;
+}
+.sliderimages {
   width: 100%;
-  padding: 3em 25em;
+  height: 100%;
 }
 .ImagesSlidesf {
   display: block;
   width: 100%;
+  object-fit: cover;
   height: 30rem;
+  object-position: 50% 50%;
 }
 .slides-slides {
-  background: yellow;
   width: 40%;
   position: relative;
 }
@@ -190,5 +206,5 @@ slider
   text-align: right;
 }
 .teamdiv1:hover {
-  transform: translateX(-10px);
 }
+/* project-images slider*/
