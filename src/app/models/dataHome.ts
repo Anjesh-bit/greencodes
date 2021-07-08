@@ -41,7 +41,7 @@ export const SERVICE: Services[] = [
     servicesfor1: 'Web Development',
     servicsdescp1:
       'If you are planning to develop user interactive web application software, you have come to the right place. If you want your business to flourish, web development is crucial.',
-    servicesfor2: 'Web Hosting & Network Security',
+    servicesfor2: 'Web Hosting & Security',
     servicsdescp2:
       'We provide web hosting to your web content in best affordable price depending on your needs in our most secure platforms.',
     servicesfor3: 'Web Design',

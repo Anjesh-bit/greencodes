@@ -41,7 +41,17 @@ import { Observable, Observer } from 'rxjs';
   templateUrl: './green-codes-home.component.html',
   styleUrls: ['./green-codes-home.component.css'],
 })
-export class GreenCodesHomeComponent implements AfterViewInit {
+export class GreenCodesHomeComponent implements OnInit, AfterViewInit {
+  webdevelopment = '../assets/webdevelopment.png';
+  webdesign = '../assets/webdesign.png';
+  seo = '../assets/seo.png';
+  networksecurity = '../assets/websecurity.png';
+
+  search = '../assets/search.png';
+  skype = '../assets/skype.png';
+  location = '../assets/location.png';
+  email = '../assets/email.png';
+  phone = '../assets/phone.png';
   forheader = '../assets/forheader.png';
   digital = '../assets/unnamed.jpg';
   MenuItemss = '../assets/icons/menu.png';
@@ -146,7 +156,7 @@ export class GreenCodesHomeComponent implements AfterViewInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
-    dots: true,
+    dots: false,
     navSpeed: 700,
     autoplay: true,
 
