@@ -489,7 +489,7 @@ export class GreenCodesHomeComponent implements OnInit, AfterViewInit {
     } else {
       this.currentIndex = 0;
     }
-    console.log(this.FilterAllLength);
+   
   }
   prev() {
     if (this.currentIndex > 0) {

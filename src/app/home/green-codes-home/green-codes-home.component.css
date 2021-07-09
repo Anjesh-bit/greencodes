@@ -2,14 +2,19 @@
 Header
 */
 .forheader {
-  width: 2.7em;
+  width: 2.2em;
   position: absolute;
-  top: 1em;
-  left: 2em;
+  top: -0.5em;
+  left: 4em;
   border-radius: 50%;
   background: #e3e3e3;
 }
-
+.forheader-md {
+  display: none;
+  position: absolute;
+  top: 1em;
+  left: 2em;
+}
 .forcontainerheight {
   margin-bottom: 3em;
 }
@@ -88,7 +93,6 @@ Header
 .navbar {
   margin-right: 7em;
   min-height: 5rem;
-
 }
 #toph1 {
   color: black;
@@ -1069,7 +1073,7 @@ Footer
 
   position: relative;
   bottom: 50%;
-  left: 70%;
+  left: 71%;
   display: flex;
 
   justify-content: space-between;

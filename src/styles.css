@@ -122,6 +122,10 @@ span {
     left: 0 !important;
   }
   .forheader {
+    display: none !important;
+  }
+  .forheader-md {
+    display: block !important;
     top: 0.2em !important;
     width: 1.8em !important;
     left: 0.9em !important;
@@ -489,6 +493,10 @@ projects
     left: 0 !important;
   }
   .forheader {
+    display: none !important;
+  }
+  .forheader-md {
+    display: block !important;
     top: 0.2em !important;
     width: 1.8em !important;
     left: 0.9em !important;
@@ -709,7 +717,11 @@ contact
   .toogleclass {
     left: 0 !important;
   }
-  .forheader {
+  .forheader{
+    display: none !important;
+  }
+  .forheader-md {
+    display: block !important;
     top: 0.2em !important;
     width: 1.8em !important;
     left: 0.9em !important;
@@ -1087,7 +1099,11 @@ contact
   .toogleclass {
     left: 0 !important;
   }
-  .forheader {
+  .forheader{
+    display: none !important;
+  }
+  .forheader-md {
+    display: block !important;
     top: 0.2em !important;
     width: 1.8em !important;
     left: 0.9em !important;
@@ -1448,7 +1464,11 @@ contact
   .toogleclass {
     left: 0 !important;
   }
-  .forheader {
+  .forheader{
+    display: none !important;
+  }
+  .forheader-md {
+    display: block !important;
     top: 0.2em !important;
     width: 1.8em !important;
     left: 0.9em !important;

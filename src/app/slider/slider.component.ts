@@ -80,7 +80,7 @@ export class SliderComponent implements OnInit {
     } else {
       this.currentIndex = 0;
     }
-    console.log(this.FilterAllLength);
+    
     this.InitInterval();
   }
 
@@ -100,5 +100,5 @@ export class SliderComponent implements OnInit {
   onmoseLEAVE() {
     this.Service.resume();
   }
-  
+
 }

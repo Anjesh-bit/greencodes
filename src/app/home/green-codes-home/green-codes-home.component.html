@@ -3,16 +3,16 @@
 
     <nav #navbar class="navbar">
 
-      <img [src]="forheader" class="forheader">
+
 
       <img [src]="MenuItemss" (click)="showmodal('modal')" class="menu-itemss">
 
-
+      <img [src]="forheader" class="forheader-md">
 
 
       <ul *ngFor="let arrays of courses" class="list-outer">
         <div #list class="list">
-
+          <img [src]="forheader" class="forheader">
           <li class="Navlist"><a href="#HomeList" class="menu-items" (click)="home($event)">{{arrays.home}}</a></li>
           <li class="Navlist"> <a href="#about" class="menu-items" (click)="about($event)">{{arrays.portfolio}}</a></li>
           <li class="Navlist"><a href="#projects" class="menu-items" (click)="projectss($event)">{{arrays.services}}</a>
